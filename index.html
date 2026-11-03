@@ -3,622 +3,672 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portal Resmi RT 006 / RW 050 Vila Permata</title>
+    <title>Elvora Medika Solution — Distributor Resmi Bahan Habis Pakai Medis (BMHP)</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Google Fonts: Plus Jakarta Sans -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        medical: {
+                            50: '#f0fdf4',
+                            100: '#dcfce7',
+                            500: '#10b981',
+                            600: '#059669',
+                            700: '#047857',
+                            900: '#064e3b',
+                        },
+                        corporate: {
+                            50: '#f8fafc',
+                            100: '#f1f5f9',
+                            800: '#1e293b',
+                            900: '#0f172a',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .custom-scrollbar::-webkit-scrollbar { width: 6px; height: 6px; }
+        .custom-scrollbar::-webkit-scrollbar-track { background: #f1f5f9; }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 9999px; }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+    </style>
 </head>
-<body class="bg-slate-100 text-slate-800 antialiased selection:bg-blue-500 selection:text-white">
+<body class="bg-corporate-50 text-corporate-900 antialiased font-sans min-h-screen flex flex-col selection:bg-medical-500 selection:text-white">
 
-    <!-- Header / Navbar -->
-    <nav class="bg-blue-900/95 backdrop-blur-md text-white sticky top-0 z-50 border-b border-blue-800 shadow-lg">
-        <div class="container mx-auto px-4 py-3.5 flex justify-between items-center">
-            <a href="#hero" class="flex items-center gap-3 group">
-                <div class="bg-blue-600 p-2 rounded-xl text-white shadow-md group-hover:scale-105 transition-transform">
-                    <i data-lucide="building-2" class="w-6 h-6"></i>
-                </div>
-                <div>
-                    <h1 class="font-bold text-lg leading-none">RT 006 Vila Permata</h1>
-                    <span class="text-xs text-blue-300 font-medium">RW 050 • Sumberjaya</span>
-                </div>
-            </a>
-
-            <div class="hidden lg:flex items-center space-x-1 text-sm font-medium">
-                <a href="#dashboard" class="px-3 py-2 rounded-lg hover:bg-blue-800/60 text-blue-100 hover:text-white transition-all flex items-center gap-1.5">
-                    <i data-lucide="layout-dashboard" class="w-4 h-4"></i> Dashboard
-                </a>
-                <a href="#keuangan" class="px-3 py-2 rounded-lg hover:bg-blue-800/60 text-blue-100 hover:text-white transition-all flex items-center gap-1.5">
-                    <i data-lucide="wallet" class="w-4 h-4"></i> Keuangan
-                </a>
-                <a href="#fasilitas" class="px-3 py-2 rounded-lg hover:bg-blue-800/60 text-blue-100 hover:text-white transition-all flex items-center gap-1.5">
-                    <i data-lucide="box" class="w-4 h-4"></i> Fasilitas & Lapangan
-                </a>
-                <a href="#karang-taruna" class="px-3 py-2 rounded-lg hover:bg-blue-800/60 text-blue-100 hover:text-white transition-all flex items-center gap-1.5">
-                    <i data-lucide="users-round" class="w-4 h-4"></i> Karang Taruna
-                </a>
-                <button onclick="openAspirasiModal()" class="px-3 py-2 rounded-lg hover:bg-blue-800/60 text-blue-100 hover:text-white transition-all flex items-center gap-1.5">
-                    <i data-lucide="message-square" class="w-4 h-4"></i> Aspirasi
-                </button>
-                <button onclick="openAdminModal()" class="ml-2 bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-500 hover:to-amber-600 text-slate-950 px-4 py-2 rounded-lg font-bold shadow-md hover:shadow-amber-500/20 transition-all flex items-center gap-2">
-                    <i data-lucide="shield-check" class="w-4 h-4"></i> Area Pengurus
-                </button>
+    <!-- Top Announcement Bar -->
+    <div class="bg-gradient-to-r from-medical-900 via-medical-700 to-corporate-900 text-white text-xs py-2 px-4">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-1">
+            <div class="flex items-center gap-2">
+                <span class="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-bold bg-medical-500 text-white animate-pulse">Official Distributor</span>
+                <span>Pusat Pengadaan BMHP Rumah Sakit, Klinik, dan Laboratorium se-Indonesia</span>
             </div>
+            <div class="flex items-center gap-4">
+                <a href="https://wa.me/6281280717166?text=Halo%20Elvora%20Medika%20Solution,%20saya%20ingin%20konsultasi%20pengadaan%20BMHP" target="_blank" class="hover:underline flex items-center gap-1">
+                    <i data-lucide="phone-call" class="w-3.5 h-3.5"></i> Hotline: 0812-8071-7166
+                </a>
+            </div>
+        </div>
+    </div>
 
-            <button id="mobile-menu-btn" class="lg:hidden p-2 rounded-lg hover:bg-blue-800 focus:outline-none">
-                <i data-lucide="menu" class="w-6 h-6"></i>
-            </button>
+    <!-- Sticky Navigation Navbar -->
+    <header class="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-slate-200 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo & Brand -->
+                <div class="flex items-center space-x-3">
+                    <div class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-medical-700 to-emerald-400 flex items-center justify-center text-white shadow-lg shadow-medical-500/20">
+                        <i data-lucide="activity" class="w-7 h-7"></i>
+                    </div>
+                    <div>
+                        <span class="text-xl font-extrabold tracking-tight bg-gradient-to-r from-corporate-900 to-medical-700 bg-clip-text text-transparent">ELVORA MEDIKA</span>
+                        <span class="block text-[11px] font-bold uppercase tracking-widest text-medical-600">Solution</span>
+                    </div>
+                </div>
+
+                <!-- Desktop Nav Links -->
+                <nav class="hidden md:flex items-center space-x-1">
+                    <a href="#beranda" class="px-3.5 py-2 rounded-lg text-sm font-semibold text-medical-700 bg-medical-50 transition">Beranda</a>
+                    <a href="#katalog" class="px-3.5 py-2 rounded-lg text-sm font-medium text-slate-600 hover:text-slate-900 hover:bg-slate-100 transition">Katalog BMHP</a>
+                    <a href="#layanan" class="px-3.5 py-2 rounded-lg text-sm font-medium text-slate-600 hover:text-slate-900 hover:bg-slate-100 transition">Layanan B2B</a>
+                    <a href="#tentang" class="px-3.5 py-2 rounded-lg text-sm font-medium text-slate-600 hover:text-slate-900 hover:bg-slate-100 transition">Tentang Kami</a>
+                    <a href="#kontak" class="px-3.5 py-2 rounded-lg text-sm font-medium text-slate-600 hover:text-slate-900 hover:bg-slate-100 transition">Kontak</a>
+                </nav>
+
+                <!-- CTA Right -->
+                <div class="flex items-center space-x-3">
+                    <a href="https://wa.me/6281280717166?text=Halo%20Elvora%20Medika%20Solution,%20saya%20ingin%20meminta%20Penawaran%20Harga%20(Quotation)%20BMHP" target="_blank" class="hidden sm:inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs font-bold text-medical-700 bg-medical-50 border border-medical-200 hover:bg-medical-100 transition shadow-sm">
+                        <i data-lucide="file-spreadsheet" class="w-4 h-4 text-medical-600"></i> Minta Penawaran
+                    </a>
+                    <a href="https://wa.me/6281280717166?text=Halo%20Elvora%20Medika%20Solution,%20saya%20ingin%20konsultasi%20pesanan%20alat%20kesehatan%20dan%20BMHP" target="_blank" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs font-bold text-white bg-gradient-to-r from-medical-600 to-emerald-600 hover:from-medical-700 hover:to-emerald-700 shadow-md shadow-medical-500/30 transition">
+                        <i data-lucide="message-circle" class="w-4 h-4"></i> WhatsApp Sales
+                    </a>
+                    <button onclick="toggleMobileMenu()" class="md:hidden p-2 rounded-lg text-slate-600 hover:bg-slate-100">
+                        <i data-lucide="menu" class="w-6 h-6"></i>
+                    </button>
+                </div>
+            </div>
         </div>
 
-        <div id="mobile-menu" class="hidden lg:hidden border-t border-blue-800 bg-blue-900 px-4 pt-2 pb-4 space-y-2">
-            <a href="#dashboard" onclick="closeMobileMenu()" class="mobile-link block px-3 py-2 rounded-lg hover:bg-blue-800 text-blue-100 flex items-center gap-2">
-                <i data-lucide="layout-dashboard" class="w-4 h-4"></i> Dashboard
-            </a>
-            <a href="#keuangan" onclick="closeMobileMenu()" class="mobile-link block px-3 py-2 rounded-lg hover:bg-blue-800 text-blue-100 flex items-center gap-2">
-                <i data-lucide="wallet" class="w-4 h-4"></i> Keuangan RT
-            </a>
-            <a href="#fasilitas" onclick="closeMobileMenu()" class="mobile-link block px-3 py-2 rounded-lg hover:bg-blue-800 text-blue-100 flex items-center gap-2">
-                <i data-lucide="box" class="w-4 h-4"></i> Fasilitas & Lapangan
-            </a>
-            <a href="#karang-taruna" onclick="closeMobileMenu()" class="mobile-link block px-3 py-2 rounded-lg hover:bg-blue-800 text-blue-100 flex items-center gap-2">
-                <i data-lucide="users-round" class="w-4 h-4"></i> Karang Taruna
-            </a>
-            <button onclick="openAspirasiModal(); closeMobileMenu();" class="w-full text-left px-3 py-2 rounded-lg hover:bg-blue-800 text-blue-100 flex items-center gap-2">
-                <i data-lucide="message-square" class="w-4 h-4"></i> Aspirasi Warga
-            </button>
-            <button onclick="openAdminModal(); closeMobileMenu();" class="w-full text-center bg-amber-400 hover:bg-amber-500 text-slate-950 px-4 py-2 rounded-lg font-bold mt-2 shadow flex items-center justify-center gap-2">
-                <i data-lucide="shield-check" class="w-4 h-4"></i> Area Pengurus
-            </button>
-        </div>
-    </nav>
-
-    <!-- Hero Banner -->
-    <header id="hero" class="relative overflow-hidden bg-gradient-to-br from-blue-900 via-blue-800 to-indigo-950 text-white py-14 md:py-20">
-        <div class="container mx-auto px-4 relative z-10 text-center max-w-3xl">
-            <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-blue-500/20 text-blue-200 border border-blue-400/30 mb-5 backdrop-blur-sm">
-                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-                Sistem Informasi Digital RT 006
-            </span>
-            <h2 class="text-3xl md:text-5xl font-extrabold tracking-tight leading-tight">
-                Selamat Datang di Portal Warga <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-200 via-sky-300 to-amber-300">RT 006 Vila Permata</span>
-            </h2>
-            <p class="mt-4 text-base md:text-lg text-blue-100/90 leading-relaxed">
-                Pusat informasi transparan, pengelolaan keuangan real-time, dan peminjaman fasilitas lingkungan.
-            </p>
-            <div class="mt-6 flex flex-wrap justify-center gap-3">
-                <button onclick="openFasilitasModal('Lapangan Olahraga')" class="bg-emerald-500 hover:bg-emerald-600 text-white px-5 py-2.5 rounded-xl font-bold shadow-lg transition-all flex items-center gap-2 text-sm">
-                    <i data-lucide="calendar" class="w-4 h-4"></i> Pesan Lapangan Olahraga
-                </button>
-                <button onclick="openAspirasiModal()" class="bg-amber-400 hover:bg-amber-500 text-slate-950 px-5 py-2.5 rounded-xl font-bold shadow-lg transition-all flex items-center gap-2 text-sm">
-                    <i data-lucide="send" class="w-4 h-4"></i> Kirim Aspirasi / Laporan
-                </button>
-            </div>
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden border-t border-slate-200 bg-white px-4 pt-3 pb-5 space-y-2">
+            <a href="#beranda" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-lg text-base font-medium text-slate-700 hover:bg-slate-100">Beranda</a>
+            <a href="#katalog" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-lg text-base font-medium text-slate-700 hover:bg-slate-100">Katalog BMHP</a>
+            <a href="#layanan" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-lg text-base font-medium text-slate-700 hover:bg-slate-100">Layanan B2B</a>
+            <a href="#tentang" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-lg text-base font-medium text-slate-700 hover:bg-slate-100">Tentang Kami</a>
+            <a href="#kontak" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-lg text-base font-medium text-slate-700 hover:bg-slate-100">Kontak</a>
         </div>
     </header>
 
-    <!-- Dashboard Statistik Utama & Demografi Warga -->
-    <section id="dashboard" class="container mx-auto my-10 px-4 scroll-mt-20">
-        <div class="flex flex-col md:flex-row md:items-center justify-between mb-6 gap-2">
-            <div>
-                <h3 class="text-2xl font-bold text-slate-800">Ringkasan Data Warga</h3>
-                <p class="text-sm text-slate-500">Informasi demografi warga terdaftar RT 006 / RW 050</p>
-            </div>
-            <span class="text-xs bg-blue-100 text-blue-700 font-semibold px-3 py-1 rounded-full w-fit flex items-center gap-1">
-                <i data-lucide="check-circle" class="w-3.5 h-3.5"></i> Terverifikasi Sekretariat
-            </span>
-        </div>
+    <!-- Main Content Wrapper -->
+    <main class="flex-1 space-y-16 pb-20">
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-10">
-            <div class="bg-white p-5 rounded-2xl shadow-sm border border-slate-200/80 hover:border-blue-400 transition-all">
-                <div class="flex items-center justify-between mb-2">
-                    <span class="text-slate-500 text-sm font-medium">Total Warga Terdata</span>
-                    <div class="p-2 bg-blue-50 text-blue-600 rounded-xl"><i data-lucide="users" class="w-5 h-5"></i></div>
-                </div>
-                <div class="flex items-baseline gap-2">
-                    <p class="text-3xl font-extrabold text-slate-900">214</p>
-                    <span class="text-xs font-semibold text-emerald-600 flex items-center">Jiwa</span>
-                </div>
-                <p class="text-xs text-slate-400 mt-2">Mencakup Warga Tetap & Domisili</p>
-            </div>
+        <!-- Hero Section -->
+        <section id="beranda" class="relative bg-gradient-to-br from-corporate-900 via-medical-900 to-corporate-800 text-white py-20 lg:py-28 overflow-hidden">
+            <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#10b981_1px,transparent_1px)] [background-size:16px_16px]"></div>
+            <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div class="space-y-6 text-center lg:text-left">
+                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-medical-500/20 border border-medical-400/30 text-medical-300 text-xs font-semibold backdrop-blur-md">
+                            <i data-lucide="shield-check" class="w-4 h-4 text-medical-400"></i> Distributor BMHP Tersertifikasi Kemenkes & ISO
+                        </div>
+                        <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight leading-tight">
+                            Solusi Terpercaya Pengadaan <span class="bg-gradient-to-r from-medical-400 to-emerald-300 bg-clip-text text-transparent">Bahan Medis Habis Pakai (BMHP)</span>
+                        </h1>
+                        <p class="text-slate-300 text-base sm:text-lg max-w-xl mx-auto lg:mx-0">
+                            Penyedia alat kesehatan sekali pakai berkualitas tinggi untuk rumah sakit, klinik pratama, puskesmas, dan laboratorium dengan jaminan sterilitas dan harga kompetitif.
+                        </p>
+                        <div class="flex flex-col sm:flex-row justify-center lg:justify-start gap-3">
+                            <a href="#katalog" class="px-6 py-3.5 rounded-xl bg-medical-500 hover:bg-medical-600 text-white font-bold text-sm shadow-xl shadow-medical-500/30 transition flex items-center justify-center gap-2">
+                                <i data-lucide="shopping-bag" class="w-5 h-5"></i> Lihat Katalog BMHP
+                            </a>
+                            <a href="https://wa.me/6281280717166?text=Halo%20Elvora%20Medika%20Solution,%20saya%20ingin%20berkonsultasi%20mengenai%20katalog%20dan%20pemesanan%20BMHP" target="_blank" class="px-6 py-3.5 rounded-xl bg-white/10 hover:bg-white/20 text-white font-bold text-sm border border-white/20 backdrop-blur-md transition flex items-center justify-center gap-2">
+                                <i data-lucide="message-circle" class="w-5 h-5 text-emerald-400"></i> Konsultasi via WhatsApp
+                            </a>
+                        </div>
+                        <div class="pt-4 grid grid-cols-3 gap-4 border-t border-white/10 text-center lg:text-left">
+                            <div>
+                                <h4 class="text-2xl font-extrabold text-medical-400">500+</h4>
+                                <p class="text-xs text-slate-400">Faskes Mitra</p>
+                            </div>
+                            <div>
+                                <h4 class="text-2xl font-extrabold text-medical-400">100%</h4>
+                                <p class="text-xs text-slate-400">Steril & Original</p>
+                            </div>
+                            <div>
+                                <h4 class="text-2xl font-extrabold text-medical-400">24/7</h4>
+                                <p class="text-xs text-slate-400">Respon Cepat</p>
+                            </div>
+                        </div>
+                    </div>
 
-            <div class="bg-white p-5 rounded-2xl shadow-sm border border-slate-200/80 hover:border-emerald-400 transition-all">
-                <div class="flex items-center justify-between mb-2">
-                    <span class="text-slate-500 text-sm font-medium">Status Ngontrak / Sewa</span>
-                    <div class="p-2 bg-emerald-50 text-emerald-600 rounded-xl"><i data-lucide="home" class="w-5 h-5"></i></div>
+                    <!-- Hero Visual Card -->
+                    <div class="relative">
+                        <div class="bg-gradient-to-tr from-medical-600/30 to-emerald-500/20 p-2 rounded-3xl border border-white/10 backdrop-blur-xl shadow-2xl">
+                            <div class="bg-corporate-900 rounded-2xl p-6 space-y-6">
+                                <div class="flex items-center justify-between pb-4 border-b border-slate-800">
+                                    <div class="flex items-center gap-3">
+                                        <div class="w-10 h-10 rounded-xl bg-medical-500/20 text-medical-400 flex items-center justify-center">
+                                            <i data-lucide="package-check" class="w-6 h-6"></i>
+                                        </div>
+                                        <div>
+                                            <h3 class="font-bold text-white text-sm">Elvora Express Order</h3>
+                                            <p class="text-xs text-slate-400">Pemesanan Instan Langsung ke WhatsApp</p>
+                                        </div>
+                                    </div>
+                                    <span class="w-3 h-3 rounded-full bg-emerald-500 animate-ping"></span>
+                                </div>
+                                <div class="space-y-3">
+                                    <div class="p-3 bg-slate-800/80 rounded-xl border border-slate-700/60 flex items-center justify-between text-xs">
+                                        <span class="text-slate-300 font-medium">1. Pilih Produk BMHP di Katalog</span>
+                                        <i data-lucide="check-circle-2" class="w-4 h-4 text-medical-400"></i>
+                                    </div>
+                                    <div class="p-3 bg-slate-800/80 rounded-xl border border-slate-700/60 flex items-center justify-between text-xs">
+                                        <span class="text-slate-300 font-medium">2. Klik "Pesan via WhatsApp"</span>
+                                        <i data-lucide="check-circle-2" class="w-4 h-4 text-medical-400"></i>
+                                    </div>
+                                    <div class="p-3 bg-slate-800/80 rounded-xl border border-slate-700/60 flex items-center justify-between text-xs">
+                                        <span class="text-slate-300 font-medium">3. Konfirmasi Quotation & Pengiriman</span>
+                                        <i data-lucide="check-circle-2" class="w-4 h-4 text-medical-400"></i>
+                                    </div>
+                                </div>
+                                <a href="#katalog" class="w-full py-3 rounded-xl bg-medical-500 hover:bg-medical-600 text-white font-bold text-xs transition flex items-center justify-center gap-2 shadow-md">
+                                    Mulai Pilih Produk Sekarang <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="flex items-baseline gap-2">
-                    <p class="text-3xl font-extrabold text-slate-900">14</p>
-                    <span class="text-xs font-semibold text-slate-500">KK</span>
-                </div>
-                <p class="text-xs text-slate-400 mt-2">Tercatat di data pengurus RT</p>
             </div>
+        </section>
 
-            <div class="bg-white p-5 rounded-2xl shadow-sm border border-slate-200/80 hover:border-amber-400 transition-all">
-                <div class="flex items-center justify-between mb-2">
-                    <span class="text-slate-500 text-sm font-medium">Program Kerja Lingkungan</span>
-                    <div class="p-2 bg-amber-50 text-amber-600 rounded-xl"><i data-lucide="activity" class="w-5 h-5"></i></div>
-                </div>
-                <div class="flex items-baseline gap-2">
-                    <p class="text-2xl font-extrabold text-amber-600">Aktif Berjalan</p>
-                </div>
-                <p class="text-xs text-slate-400 mt-2">Gotong royong & keamanan lingkungan</p>
-            </div>
-        </div>
-
-        <!-- Keuangan RT Real-Time -->
-        <div id="keuangan" class="scroll-mt-20">
-            <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-4 gap-2">
+        <!-- KATALOG PRODUK BMHP -->
+        <section id="katalog" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
                 <div>
-                    <h3 class="text-2xl font-bold text-slate-800">Laporan Keuangan RT</h3>
-                    <p class="text-sm text-slate-500">Ringkasan kas terintegrasi real-time dari Google Spreadsheet masterdata</p>
+                    <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-medical-100 text-medical-700 text-xs font-bold mb-2">
+                        <i data-lucide="boxes" class="w-3.5 h-3.5"></i> Katalog Produk Unggulan
+                    </div>
+                    <h2 class="text-2xl sm:text-3xl font-extrabold text-corporate-900">Aneka Produk Bahan Medis Habis Pakai (BMHP)</h2>
+                    <p class="text-sm text-slate-600 mt-1">Klik tombol <span class="font-bold text-emerald-600">"Pesan via WhatsApp"</span> pada produk pilihan untuk terhubung langsung dengan tim sales kami.</p>
                 </div>
-                <button onclick="openAdminModal()" class="text-xs font-semibold text-blue-600 hover:text-blue-800 flex items-center gap-1 w-fit bg-blue-50 px-3 py-1.5 rounded-lg border border-blue-200">
-                    <i data-lucide="external-link" class="w-3.5 h-3.5"></i> Buka Spreadsheet Kas Full
-                </button>
+
+                <!-- Kategori Filter Tabs -->
+                <div class="flex flex-wrap gap-2" id="category-filters">
+                    <button onclick="filterCatalog('all')" class="cat-btn px-4 py-2 rounded-xl text-xs font-bold bg-medical-600 text-white shadow-sm transition">Semua Produk</button>
+                    <button onclick="filterCatalog('infus')" class="cat-btn px-4 py-2 rounded-xl text-xs font-semibold bg-white text-slate-600 border border-slate-200 hover:bg-slate-50 transition">Infus & Transfusi</button>
+                    <button onclick="filterCatalog('suntik')" class="cat-btn px-4 py-2 rounded-xl text-xs font-semibold bg-white text-slate-600 border border-slate-200 hover:bg-slate-50 transition">Alat Suntik & Jarum</button>
+                    <button onclick="filterCatalog('sarungtangan')" class="cat-btn px-4 py-2 rounded-xl text-xs font-semibold bg-white text-slate-600 border border-slate-200 hover:bg-slate-50 transition">Sarung Tangan</button>
+                    <button onclick="filterCatalog('perban')" class="cat-btn px-4 py-2 rounded-xl text-xs font-semibold bg-white text-slate-600 border border-slate-200 hover:bg-slate-50 transition">Perban & Bedah</button>
+                    <button onclick="filterCatalog('diagnostik')" class="cat-btn px-4 py-2 rounded-xl text-xs font-semibold bg-white text-slate-600 border border-slate-200 hover:bg-slate-50 transition">Diagnostik & Lab</button>
+                </div>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-5 mb-8">
-                <div class="bg-white p-6 rounded-2xl shadow-sm border border-emerald-200/80 hover:shadow-md transition-all">
-                    <div class="flex items-center justify-between mb-3">
-                        <span class="text-slate-600 text-sm font-semibold">Total Uang Masuk</span>
-                        <div class="p-2.5 bg-emerald-100 text-emerald-700 rounded-xl"><i data-lucide="arrow-down-left" class="w-6 h-6"></i></div>
+            <!-- Search Bar inside Katalog -->
+            <div class="relative max-w-md">
+                <i data-lucide="search" class="w-4 h-4 absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400"></i>
+                <input type="text" id="search-product" onkeyup="searchCatalogItems()" placeholder="Cari nama alat medis / BMHP (contoh: Infus Set, Spuit, Handscoon)..." class="w-full pl-10 pr-4 py-2.5 rounded-xl border border-slate-300 text-xs focus:outline-none focus:ring-2 focus:ring-medical-500 bg-white shadow-sm">
+            </div>
+
+            <!-- Product Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="product-grid">
+                <!-- Produk 1 -->
+                <div class="product-card bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-lg transition flex flex-col justify-between overflow-hidden group" data-category="infus">
+                    <div class="p-5 space-y-3">
+                        <div class="flex items-center justify-between">
+                            <span class="px-2.5 py-1 rounded-full text-[10px] font-bold bg-emerald-50 text-emerald-700 border border-emerald-200">Infus & Transfusi</span>
+                            <span class="text-xs font-semibold text-slate-400">Ready Stock</span>
+                        </div>
+                        <div class="h-40 rounded-xl bg-slate-100 flex items-center justify-center text-medical-600 overflow-hidden relative group-hover:bg-medical-50 transition">
+                            <div class="absolute inset-0 bg-gradient-to-tr from-medical-900/10 to-transparent"></div>
+                            <i data-lucide="droplet" class="w-16 h-16 text-medical-500 group-hover:scale-110 transition duration-300"></i>
+                            <span class="absolute bottom-2 left-2 text-[10px] bg-white/90 px-2 py-0.5 rounded font-bold text-slate-700">Kemenkes RI AKD</span>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-slate-900 text-base">Infus Set Makro / Mikro (IV Set)</h3>
+                            <p class="text-xs text-slate-500 mt-1">Steril, pyrogen-free, jarum tajam presisi tinggi untuk aliran cairan infus yang stabil.</p>
+                        </div>
+                        <div class="pt-2 flex items-center justify-between border-t border-slate-100 text-xs">
+                            <span class="text-slate-400">Min. Order: <strong class="text-slate-700">1 Box (50 pcs)</strong></span>
+                            <span class="font-extrabold text-medical-700">Harga Grosir B2B</span>
+                        </div>
                     </div>
-                    <p id="total-masuk" class="text-3xl font-extrabold text-emerald-600">Memuat...</p>
-                    <p class="text-xs text-slate-400 mt-2 flex items-center gap-1">
-                        <i data-lucide="refresh-cw" class="w-3 h-3 text-emerald-500"></i> Auto-Sync via Spreadsheet
+                    <div class="p-4 bg-slate-50 border-t border-slate-100">
+                        <button onclick="orderViaWhatsApp('Infus Set Makro / Mikro (IV Set)', '1 Box (50 pcs)')" class="w-full py-2.5 rounded-xl bg-medical-600 hover:bg-medical-700 text-white font-bold text-xs transition flex items-center justify-center gap-2 shadow-sm shadow-medical-500/20">
+                            <i data-lucide="message-circle" class="w-4 h-4"></i> Pesan via WhatsApp
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Produk 2 -->
+                <div class="product-card bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-lg transition flex flex-col justify-between overflow-hidden group" data-category="suntik">
+                    <div class="p-5 space-y-3">
+                        <div class="flex items-center justify-between">
+                            <span class="px-2.5 py-1 rounded-full text-[10px] font-bold bg-blue-50 text-blue-700 border border-blue-200">Alat Suntik & Jarum</span>
+                            <span class="text-xs font-semibold text-slate-400">Ready Stock</span>
+                        </div>
+                        <div class="h-40 rounded-xl bg-slate-100 flex items-center justify-center text-blue-600 overflow-hidden relative group-hover:bg-blue-50 transition">
+                            <div class="absolute inset-0 bg-gradient-to-tr from-blue-900/10 to-transparent"></div>
+                            <i data-lucide="syringe" class="w-16 h-16 text-blue-500 group-hover:scale-110 transition duration-300"></i>
+                            <span class="absolute bottom-2 left-2 text-[10px] bg-white/90 px-2 py-0.5 rounded font-bold text-slate-700">Disposable Syringe</span>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-slate-900 text-base">Spuit / Syringe 3cc & 5cc with Needle</h3>
+                            <p class="text-xs text-slate-500 mt-1">Disposable syringe sekali pakai, silikon dilapisi halus untuk injeksi nirnyeri.</p>
+                        </div>
+                        <div class="pt-2 flex items-center justify-between border-t border-slate-100 text-xs">
+                            <span class="text-slate-400">Min. Order: <strong class="text-slate-700">1 Box (100 pcs)</strong></span>
+                            <span class="font-extrabold text-medical-700">Harga Grosir B2B</span>
+                        </div>
+                    </div>
+                    <div class="p-4 bg-slate-50 border-t border-slate-100">
+                        <button onclick="orderViaWhatsApp('Spuit / Syringe 3cc & 5cc with Needle', '1 Box (100 pcs)')" class="w-full py-2.5 rounded-xl bg-medical-600 hover:bg-medical-700 text-white font-bold text-xs transition flex items-center justify-center gap-2 shadow-sm shadow-medical-500/20">
+                            <i data-lucide="message-circle" class="w-4 h-4"></i> Pesan via WhatsApp
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Produk 3 -->
+                <div class="product-card bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-lg transition flex flex-col justify-between overflow-hidden group" data-category="sarungtangan">
+                    <div class="p-5 space-y-3">
+                        <div class="flex items-center justify-between">
+                            <span class="px-2.5 py-1 rounded-full text-[10px] font-bold bg-teal-50 text-teal-700 border border-teal-200">Sarung Tangan</span>
+                            <span class="text-xs font-semibold text-slate-400">Ready Stock</span>
+                        </div>
+                        <div class="h-40 rounded-xl bg-slate-100 flex items-center justify-center text-teal-600 overflow-hidden relative group-hover:bg-teal-50 transition">
+                            <div class="absolute inset-0 bg-gradient-to-tr from-teal-900/10 to-transparent"></div>
+                            <i data-lucide="hand" class="w-16 h-16 text-teal-500 group-hover:scale-110 transition duration-300"></i>
+                            <span class="absolute bottom-2 left-2 text-[10px] bg-white/90 px-2 py-0.5 rounded font-bold text-slate-700">Non-Sterile / Powder Free</span>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-slate-900 text-base">Handscoon / Sarung Tangan Lateks</h3>
+                            <p class="text-xs text-slate-500 mt-1">Sarung tangan pemeriksaan medis elastis tinggi, kuat, dan tidak mudah robek.</p>
+                        </div>
+                        <div class="pt-2 flex items-center justify-between border-t border-slate-100 text-xs">
+                            <span class="text-slate-400">Min. Order: <strong class="text-slate-700">1 Box (100 pcs)</strong></span>
+                            <span class="font-extrabold text-medical-700">Harga Grosir B2B</span>
+                        </div>
+                    </div>
+                    <div class="p-4 bg-slate-50 border-t border-slate-100">
+                        <button onclick="orderViaWhatsApp('Handscoon / Sarung Tangan Lateks', '1 Box (100 pcs)')" class="w-full py-2.5 rounded-xl bg-medical-600 hover:bg-medical-700 text-white font-bold text-xs transition flex items-center justify-center gap-2 shadow-sm shadow-medical-500/20">
+                            <i data-lucide="message-circle" class="w-4 h-4"></i> Pesan via WhatsApp
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Produk 4 -->
+                <div class="product-card bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-lg transition flex flex-col justify-between overflow-hidden group" data-category="perban">
+                    <div class="p-5 space-y-3">
+                        <div class="flex items-center justify-between">
+                            <span class="px-2.5 py-1 rounded-full text-[10px] font-bold bg-amber-50 text-amber-700 border border-amber-200">Perban & Bedah</span>
+                            <span class="text-xs font-semibold text-slate-400">Ready Stock</span>
+                        </div>
+                        <div class="h-40 rounded-xl bg-slate-100 flex items-center justify-center text-amber-600 overflow-hidden relative group-hover:bg-amber-50 transition">
+                            <div class="absolute inset-0 bg-gradient-to-tr from-amber-900/10 to-transparent"></div>
+                            <i data-lucide="bandage" class="w-16 h-16 text-amber-500 group-hover:scale-110 transition duration-300"></i>
+                            <span class="absolute bottom-2 left-2 text-[10px] bg-white/90 px-2 py-0.5 rounded font-bold text-slate-700">100% Cotton Absorbent</span>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-slate-900 text-base">Kasa Steril & Perban Gulung (Absorbent Gauze)</h3>
+                            <p class="text-xs text-slate-500 mt-1">Kain kasa steril berdaya serap tinggi untuk penutup luka operasi dan fiksasi medis.</p>
+                        </div>
+                        <div class="pt-2 flex items-center justify-between border-t border-slate-100 text-xs">
+                            <span class="text-slate-400">Min. Order: <strong class="text-slate-700">1 Pack (10 Roll)</strong></span>
+                            <span class="font-extrabold text-medical-700">Harga Grosir B2B</span>
+                        </div>
+                    </div>
+                    <div class="p-4 bg-slate-50 border-t border-slate-100">
+                        <button onclick="orderViaWhatsApp('Kasa Steril & Perban Gulung (Absorbent Gauze)', '1 Pack (10 Roll)')" class="w-full py-2.5 rounded-xl bg-medical-600 hover:bg-medical-700 text-white font-bold text-xs transition flex items-center justify-center gap-2 shadow-sm shadow-medical-500/20">
+                            <i data-lucide="message-circle" class="w-4 h-4"></i> Pesan via WhatsApp
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Produk 5 -->
+                <div class="product-card bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-lg transition flex flex-col justify-between overflow-hidden group" data-category="diagnostik">
+                    <div class="p-5 space-y-3">
+                        <div class="flex items-center justify-between">
+                            <span class="px-2.5 py-1 rounded-full text-[10px] font-bold bg-purple-50 text-purple-700 border border-purple-200">Diagnostik & Lab</span>
+                            <span class="text-xs font-semibold text-slate-400">Ready Stock</span>
+                        </div>
+                        <div class="h-40 rounded-xl bg-slate-100 flex items-center justify-center text-purple-600 overflow-hidden relative group-hover:bg-purple-50 transition">
+                            <div class="absolute inset-0 bg-gradient-to-tr from-purple-900/10 to-transparent"></div>
+                            <i data-lucide="flask-conical" class="w-16 h-16 text-purple-500 group-hover:scale-110 transition duration-300"></i>
+                            <span class="absolute bottom-2 left-2 text-[10px] bg-white/90 px-2 py-0.5 rounded font-bold text-slate-700">Vacutainer & Lancets</span>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-slate-900 text-base">Blood Lancet & Vacutainer Blood Collection Tube</h3>
+                            <p class="text-xs text-slate-500 mt-1">Tabung sampel darah vakum (EDTA, Serum, Heparin) & jarum lancet tes gula darah.</p>
+                        </div>
+                        <div class="pt-2 flex items-center justify-between border-t border-slate-100 text-xs">
+                            <span class="text-slate-400">Min. Order: <strong class="text-slate-700">1 Rack (100 pcs)</strong></span>
+                            <span class="font-extrabold text-medical-700">Harga Grosir B2B</span>
+                        </div>
+                    </div>
+                    <div class="p-4 bg-slate-50 border-t border-slate-100">
+                        <button onclick="orderViaWhatsApp('Blood Lancet & Vacutainer Blood Collection Tube', '1 Rack (100 pcs)')" class="w-full py-2.5 rounded-xl bg-medical-600 hover:bg-medical-700 text-white font-bold text-xs transition flex items-center justify-center gap-2 shadow-sm shadow-medical-500/20">
+                            <i data-lucide="message-circle" class="w-4 h-4"></i> Pesan via WhatsApp
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Produk 6 -->
+                <div class="product-card bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-lg transition flex flex-col justify-between overflow-hidden group" data-category="sarungtangan">
+                    <div class="p-5 space-y-3">
+                        <div class="flex items-center justify-between">
+                            <span class="px-2.5 py-1 rounded-full text-[10px] font-bold bg-teal-50 text-teal-700 border border-teal-200">Sarung Tangan</span>
+                            <span class="text-xs font-semibold text-slate-400">Ready Stock</span>
+                        </div>
+                        <div class="h-40 rounded-xl bg-slate-100 flex items-center justify-center text-teal-600 overflow-hidden relative group-hover:bg-teal-50 transition">
+                            <div class="absolute inset-0 bg-gradient-to-tr from-teal-900/10 to-transparent"></div>
+                            <i data-lucide="shield" class="w-16 h-16 text-teal-500 group-hover:scale-110 transition duration-300"></i>
+                            <span class="absolute bottom-2 left-2 text-[10px] bg-white/90 px-2 py-0.5 rounded font-bold text-slate-700">Surgical Sterile</span>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-slate-900 text-base">Sarung Tangan Bedah Steril (Surgical Gloves)</h3>
+                            <p class="text-xs text-slate-500 mt-1">Sarung tangan bedah steril bersegel individual, anatomis dan nyaman untuk operasi bedah.</p>
+                        </div>
+                        <div class="pt-2 flex items-center justify-between border-t border-slate-100 text-xs">
+                            <span class="text-slate-400">Min. Order: <strong class="text-slate-700">1 Box (50 pasang)</strong></span>
+                            <span class="font-extrabold text-medical-700">Harga Grosir B2B</span>
+                        </div>
+                    </div>
+                    <div class="p-4 bg-slate-50 border-t border-slate-100">
+                        <button onclick="orderViaWhatsApp('Sarung Tangan Bedah Steril (Surgical Gloves)', '1 Box (50 pasang)')" class="w-full py-2.5 rounded-xl bg-medical-600 hover:bg-medical-700 text-white font-bold text-xs transition flex items-center justify-center gap-2 shadow-sm shadow-medical-500/20">
+                            <i data-lucide="message-circle" class="w-4 h-4"></i> Pesan via WhatsApp
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Produk 7 -->
+                <div class="product-card bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-lg transition flex flex-col justify-between overflow-hidden group" data-category="infus">
+                    <div class="p-5 space-y-3">
+                        <div class="flex items-center justify-between">
+                            <span class="px-2.5 py-1 rounded-full text-[10px] font-bold bg-emerald-50 text-emerald-700 border border-emerald-200">Infus & Transfusi</span>
+                            <span class="text-xs font-semibold text-slate-400">Ready Stock</span>
+                        </div>
+                        <div class="h-40 rounded-xl bg-slate-100 flex items-center justify-center text-emerald-600 overflow-hidden relative group-hover:bg-emerald-50 transition">
+                            <div class="absolute inset-0 bg-gradient-to-tr from-emerald-900/10 to-transparent"></div>
+                            <i data-lucide="activity" class="w-16 h-16 text-emerald-500 group-hover:scale-110 transition duration-300"></i>
+                            <span class="absolute bottom-2 left-2 text-[10px] bg-white/90 px-2 py-0.5 rounded font-bold text-slate-700">Blood Transfusion Set</span>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-slate-900 text-base">Blood Transfusion Set (Set Transfusi Darah)</h3>
+                            <p class="text-xs text-slate-500 mt-1">Perangkat infus khusus transfusi darah dengan filter mikro ganda yang aman dan steril.</p>
+                        </div>
+                        <div class="pt-2 flex items-center justify-between border-t border-slate-100 text-xs">
+                            <span class="text-slate-400">Min. Order: <strong class="text-slate-700">1 Box (50 pcs)</strong></span>
+                            <span class="font-extrabold text-medical-700">Harga Grosir B2B</span>
+                        </div>
+                    </div>
+                    <div class="p-4 bg-slate-50 border-t border-slate-100">
+                        <button onclick="orderViaWhatsApp('Blood Transfusion Set (Set Transfusi Darah)', '1 Box (50 pcs)')" class="w-full py-2.5 rounded-xl bg-medical-600 hover:bg-medical-700 text-white font-bold text-xs transition flex items-center justify-center gap-2 shadow-sm shadow-medical-500/20">
+                            <i data-lucide="message-circle" class="w-4 h-4"></i> Pesan via WhatsApp
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Produk 8 -->
+                <div class="product-card bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-lg transition flex flex-col justify-between overflow-hidden group" data-category="diagnostik">
+                    <div class="p-5 space-y-3">
+                        <div class="flex items-center justify-between">
+                            <span class="px-2.5 py-1 rounded-full text-[10px] font-bold bg-purple-50 text-purple-700 border border-purple-200">Diagnostik & Lab</span>
+                            <span class="text-xs font-semibold text-slate-400">Ready Stock</span>
+                        </div>
+                        <div class="h-40 rounded-xl bg-slate-100 flex items-center justify-center text-purple-600 overflow-hidden relative group-hover:bg-purple-50 transition">
+                            <div class="absolute inset-0 bg-gradient-to-tr from-purple-900/10 to-transparent"></div>
+                            <i data-lucide="test-tubes" class="w-16 h-16 text-purple-500 group-hover:scale-110 transition duration-300"></i>
+                            <span class="absolute bottom-2 left-2 text-[10px] bg-white/90 px-2 py-0.5 rounded font-bold text-slate-700">Rapid Test Kit</span>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-slate-900 text-base">Alat Tes Rapid Antigen & Multi Drug Test</h3>
+                            <p class="text-xs text-slate-500 mt-1">Kit tes cepat diagnostik akurasi tinggi untuk skrining kesehatan mandiri dan instansi.</p>
+                        </div>
+                        <div class="pt-2 flex items-center justify-between border-t border-slate-100 text-xs">
+                            <span class="text-slate-400">Min. Order: <strong class="text-slate-700">1 Box (25 test)</strong></span>
+                            <span class="font-extrabold text-medical-700">Harga Grosir B2B</span>
+                        </div>
+                    </div>
+                    <div class="p-4 bg-slate-50 border-t border-slate-100">
+                        <button onclick="orderViaWhatsApp('Alat Tes Rapid Antigen & Multi Drug Test', '1 Box (25 test)')" class="w-full py-2.5 rounded-xl bg-medical-600 hover:bg-medical-700 text-white font-bold text-xs transition flex items-center justify-center gap-2 shadow-sm shadow-medical-500/20">
+                            <i data-lucide="message-circle" class="w-4 h-4"></i> Pesan via WhatsApp
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Produk 9 -->
+                <div class="product-card bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-lg transition flex flex-col justify-between overflow-hidden group" data-category="perban">
+                    <div class="p-5 space-y-3">
+                        <div class="flex items-center justify-between">
+                            <span class="px-2.5 py-1 rounded-full text-[10px] font-bold bg-amber-50 text-amber-700 border border-amber-200">Perban & Bedah</span>
+                            <span class="text-xs font-semibold text-slate-400">Ready Stock</span>
+                        </div>
+                        <div class="h-40 rounded-xl bg-slate-100 flex items-center justify-center text-amber-600 overflow-hidden relative group-hover:bg-amber-50 transition">
+                            <div class="absolute inset-0 bg-gradient-to-tr from-amber-900/10 to-transparent"></div>
+                            <i data-lucide="first-aid-kit" class="w-16 h-16 text-amber-500 group-hover:scale-110 transition duration-300"></i>
+                            <span class="absolute bottom-2 left-2 text-[10px] bg-white/90 px-2 py-0.5 rounded font-bold text-slate-700">Elastic Bandage</span>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-slate-900 text-base">Elastic Bandage / Verban Elastis (3 inch & 4 inch)</h3>
+                            <p class="text-xs text-slate-500 mt-1">Perban elastis medis untuk fiksasi cedera otot, keseleo, dan penunjang ortopedi.</p>
+                        </div>
+                        <div class="pt-2 flex items-center justify-between border-t border-slate-100 text-xs">
+                            <span class="text-slate-400">Min. Order: <strong class="text-slate-700">1 Box (12 roll)</strong></span>
+                            <span class="font-extrabold text-medical-700">Harga Grosir B2B</span>
+                        </div>
+                    </div>
+                    <div class="p-4 bg-slate-50 border-t border-slate-100">
+                        <button onclick="orderViaWhatsApp('Elastic Bandage / Verban Elastis (3 inch & 4 inch)', '1 Box (12 roll)')" class="w-full py-2.5 rounded-xl bg-medical-600 hover:bg-medical-700 text-white font-bold text-xs transition flex items-center justify-center gap-2 shadow-sm shadow-medical-500/20">
+                            <i data-lucide="message-circle" class="w-4 h-4"></i> Pesan via WhatsApp
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- LAYANAN B2B & RUMAH SAKIT -->
+        <section id="layanan" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-gradient-to-br from-white to-corporate-50 rounded-3xl border border-slate-200 p-8 lg:p-12 shadow-sm space-y-8">
+                <div class="text-center max-w-2xl mx-auto space-y-2">
+                    <span class="text-xs font-bold uppercase tracking-wider text-medical-600 bg-medical-50 px-3 py-1 rounded-full border border-medical-200">Layanan Korporat & Faskes</span>
+                    <h2 class="text-2xl sm:text-3xl font-extrabold text-corporate-900">Mengapa Rumah Sakit & Klinik Memilih Elvora Medika Solution?</h2>
+                    <p class="text-xs sm:text-sm text-slate-600">Kami berkomitmen menjadi mitra strategis pengadaan alat kesehatan habis pakai dengan standar mutu tertinggi.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-3">
+                        <div class="w-12 h-12 rounded-xl bg-medical-50 text-medical-600 flex items-center justify-center font-bold text-lg">
+                            <i data-lucide="shield-check" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="font-bold text-corporate-900 text-base">Legalitas & Kemenkes Resmi</h3>
+                        <p class="text-xs text-slate-600 leading-relaxed">Seluruh produk BMHP kami telah memiliki izin edar resmi Kementerian Kesehatan RI, menjamin keamanan dan kepatuhan audit rumah sakit.</p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-3">
+                        <div class="w-12 h-12 rounded-xl bg-medical-50 text-medical-600 flex items-center justify-center font-bold text-lg">
+                            <i data-lucide="truck" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="font-bold text-corporate-900 text-base">Distribusi Cepat & Aman</h3>
+                        <p class="text-xs text-slate-600 leading-relaxed">Jaringan logistik handal memastikan ketersediaan stok rutin rumah sakit dan klinik Anda tidak pernah terlambat.</p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-3">
+                        <div class="w-12 h-12 rounded-xl bg-medical-50 text-medical-600 flex items-center justify-center font-bold text-lg">
+                            <i data-lucide="handshake" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="font-bold text-corporate-900 text-base">Skema Pembayaran Fleksibel</h3>
+                        <p class="text-xs text-slate-600 leading-relaxed">Tersedia penawaran khusus, e-Katalog, sistem tender, serta term of payment (TOP) untuk mitra institusi terpercaya.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TENTANG KAMI -->
+        <section id="tentang" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="space-y-4">
+                    <span class="text-xs font-bold uppercase tracking-wider text-medical-600 bg-medical-50 px-3 py-1 rounded-full border border-medical-200">Tentang Elvora Medika Solution</span>
+                    <h2 class="text-2xl sm:text-3xl font-extrabold text-corporate-900">Mitra Pengadaan Alat Kesehatan & BMHP Terdepan di Indonesia</h2>
+                    <p class="text-sm text-slate-600 leading-relaxed">
+                        <strong>Elvora Medika Solution</strong> hadir sebagai jawaban atas kebutuhan fasilitas kesehatan modern yang menuntut kecepatan, sterilitas tinggi, dan transparansi harga dalam pengadaan Bahan Medis Habis Pakai (BMHP).
                     </p>
-                </div>
-
-                <div class="bg-white p-6 rounded-2xl shadow-sm border border-rose-200/80 hover:shadow-md transition-all">
-                    <div class="flex items-center justify-between mb-3">
-                        <span class="text-slate-600 text-sm font-semibold">Total Uang Keluar</span>
-                        <div class="p-2.5 bg-rose-100 text-rose-700 rounded-xl"><i data-lucide="arrow-up-right" class="w-6 h-6"></i></div>
-                    </div>
-                    <p id="total-keluar" class="text-3xl font-extrabold text-rose-600">Memuat...</p>
-                    <p class="text-xs text-slate-400 mt-2 flex items-center gap-1">
-                        <i data-lucide="refresh-cw" class="w-3 h-3 text-rose-500"></i> Auto-Sync via Spreadsheet
+                    <p class="text-sm text-slate-600 leading-relaxed">
+                        Kami melayani suplai rutin untuk ratusan rumah sakit swasta maupun pemerintah, klinik bersalin, laboratorium klinik, dan apotek di seluruh wilayah Indonesia dengan dukungan layanan pelanggan profesional via WhatsApp.
                     </p>
+                    <div class="pt-2 flex gap-4">
+                        <a href="https://wa.me/6281280717166?text=Halo%20Elvora%20Medika%20Solution,%20saya%20ingin%20bekerjasama%20sebagai%20mitra%20faskes" target="_blank" class="px-5 py-3 rounded-xl bg-corporate-900 text-white font-bold text-xs hover:bg-corporate-800 transition shadow-md flex items-center gap-2">
+                            <i data-lucide="building-2" class="w-4 h-4 text-medical-400"></i> Kerjasama Institusi / Faskes
+                        </a>
+                    </div>
                 </div>
 
-                <div class="bg-gradient-to-br from-blue-900 to-indigo-900 text-white p-6 rounded-2xl shadow-md hover:shadow-lg transition-all">
-                    <div class="flex items-center justify-between mb-3">
-                        <span class="text-blue-200 text-sm font-semibold">Saldo Terkini Kas RT</span>
-                        <div class="p-2.5 bg-white/20 text-white rounded-xl"><i data-lucide="wallet" class="w-6 h-6"></i></div>
+                <div class="bg-gradient-to-tr from-medical-600 to-emerald-500 p-8 rounded-3xl text-white shadow-xl space-y-6">
+                    <div class="flex items-center gap-3">
+                        <div class="w-12 h-12 rounded-2xl bg-white/20 backdrop-blur-md flex items-center justify-center">
+                            <i data-lucide="award" class="w-7 h-7 text-white"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-extrabold text-lg">Komitmen Mutu & Sterilitas</h3>
+                            <p class="text-xs text-medical-100">Standar Internasional ISO & Kemenkes RI</p>
+                        </div>
                     </div>
-                    <p id="saldo-terkini" class="text-3xl font-extrabold text-amber-300">Memuat...</p>
-                    <p class="text-xs text-blue-200 mt-2 flex items-center gap-1">
-                        <i data-lucide="shield-check" class="w-3.5 h-3.5 text-emerald-400"></i> Balance & Akurat
+                    <p class="text-xs leading-relaxed text-slate-100">
+                        Setiap produk BMHP yang didistribusikan melalui Elvora Medika Solution melewati quality control yang ketat untuk menjamin keamanan pasien dan tenaga medis di garis depan pelayanan kesehatan.
                     </p>
-                </div>
-            </div>
-        </div>
-
-        <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200/80">
-            <div class="flex items-center gap-2 mb-4 pb-3 border-b border-slate-100">
-                <i data-lucide="bell" class="w-5 h-5 text-blue-600"></i>
-                <h4 class="font-bold text-slate-800 text-lg">Informasi & Agenda Pengurus RT</h4>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div class="p-4 bg-slate-50 rounded-xl border border-slate-200/60">
-                    <span class="text-xs font-bold text-blue-600 bg-blue-100 px-2.5 py-1 rounded-md">Kegiatan Rutin</span>
-                    <h5 class="font-bold text-slate-800 mt-2">Gotong Royong & Kerja Bakti Kebersihan</h5>
-                    <p class="text-xs text-slate-500 mt-1">Minggu Pertama Bulan Ini • Pukul 07.00 WIB - Selesai</p>
-                </div>
-                <div class="p-4 bg-slate-50 rounded-xl border border-slate-200/60">
-                    <span class="text-xs font-bold text-emerald-600 bg-emerald-100 px-2.5 py-1 rounded-md">Informasi Iuran</span>
-                    <h5 class="font-bold text-slate-800 mt-2">Penarikan Iuran Bulanan Kebersihan & Keamanan</h5>
-                    <p class="text-xs text-slate-500 mt-1">Petugas RT akan berkunjung mulai tanggal 1 s/d 10 setiap bulan.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Section Inventaris & Fasilitas -->
-    <section id="fasilitas" class="container mx-auto my-10 px-4 scroll-mt-20">
-        <div class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-slate-200/80">
-            <div class="flex flex-col md:flex-row md:items-center justify-between mb-6 gap-4">
-                <div class="flex items-center gap-3">
-                    <div class="p-3 bg-emerald-100 text-emerald-700 rounded-xl"><i data-lucide="box" class="w-6 h-6"></i></div>
-                    <div>
-                        <h3 class="text-xl font-bold text-slate-800">Inventaris, Fasilitas & Lapangan Olahraga</h3>
-                        <p class="text-sm text-slate-500">Pemesanan fasilitas terintegrasi WhatsApp: 085111302077</p>
+                    <div class="p-4 bg-white/10 rounded-2xl border border-white/20 backdrop-blur-md flex items-center justify-between text-xs">
+                        <span>Butuh Proposal & Daftar Harga Lengkap?</span>
+                        <a href="https://wa.me/6281280717166?text=Halo%20Elvora%20Medika,%20mohon%20kirimkan%20Proposal%20dan%20Price%20List%20BMHP%20terbaru" target="_blank" class="px-3 py-1.5 rounded-lg bg-white text-medical-800 font-bold hover:bg-medical-50 transition">Minta Price List</a>
                     </div>
                 </div>
             </div>
+        </section>
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-                <div class="p-5 rounded-2xl bg-gradient-to-br from-emerald-50 to-teal-50 border border-emerald-200 flex flex-col justify-between hover:shadow-md transition-all">
-                    <div>
-                        <div class="w-10 h-10 bg-emerald-600 text-white rounded-xl flex items-center justify-center mb-3">
-                            <i data-lucide="trophy" class="w-5 h-5"></i>
-                        </div>
-                        <h5 class="font-bold text-slate-800 text-base">Lapangan Olahraga</h5>
-                        <p class="text-xs text-slate-500 mt-1">Badminton, Voli, & Kegiatan Warga</p>
-                    </div>
-                    <button onclick="openFasilitasModal('Lapangan Olahraga')" class="mt-4 w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-2 rounded-xl text-xs transition-all flex items-center justify-center gap-1 shadow">
-                        <i data-lucide="calendar" class="w-3.5 h-3.5"></i> Pesan Lapangan
-                    </button>
+        <!-- KONTAK & CALL TO ACTION -->
+        <section id="kontak" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-gradient-to-r from-medical-900 via-medical-700 to-corporate-900 rounded-3xl p-8 sm:p-12 text-white shadow-2xl flex flex-col md:flex-row items-center justify-between gap-8">
+                <div class="space-y-3 text-center md:text-left">
+                    <span class="px-3 py-1 rounded-full bg-white/10 text-medical-300 text-xs font-semibold border border-white/20">Hubungi Tim Marketing Kami</span>
+                    <h2 class="text-2xl sm:text-3xl font-extrabold">Siap Melengkapi Kebutuhan BMHP Faskes Anda?</h2>
+                    <p class="text-slate-300 text-xs sm:text-sm max-w-xl">Konsultasikan kebutuhan rumah sakit atau klinik Anda sekarang juga. Tim sales kami siap merespon cepat via WhatsApp.</p>
                 </div>
-
-                <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200 flex flex-col justify-between hover:shadow-md transition-all">
-                    <div>
-                        <div class="w-10 h-10 bg-blue-600 text-white rounded-xl flex items-center justify-center mb-3">
-                            <i data-lucide="table" class="w-5 h-5"></i>
-                        </div>
-                        <h5 class="font-bold text-slate-800 text-base">Meja Plastik</h5>
-                        <p class="text-xs text-slate-500 mt-1">4 Unit (Kondisi Baik)</p>
-                    </div>
-                    <button onclick="openFasilitasModal('Meja Plastik')" class="mt-4 w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 rounded-xl text-xs transition-all flex items-center justify-center gap-1 shadow">
-                        <i data-lucide="box" class="w-3.5 h-3.5"></i> Pinjam Meja
-                    </button>
-                </div>
-
-                <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200 flex flex-col justify-between hover:shadow-md transition-all">
-                    <div>
-                        <div class="w-10 h-10 bg-indigo-600 text-white rounded-xl flex items-center justify-center mb-3">
-                            <i data-lucide="armchair" class="w-5 h-5"></i>
-                        </div>
-                        <h5 class="font-bold text-slate-800 text-base">Kursi Plastik</h5>
-                        <p class="text-xs text-slate-500 mt-1">50 Unit (Siap Pakai)</p>
-                    </div>
-                    <button onclick="openFasilitasModal('Kursi Plastik')" class="mt-4 w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 rounded-xl text-xs transition-all flex items-center justify-center gap-1 shadow">
-                        <i data-lucide="box" class="w-3.5 h-3.5"></i> Pinjam Kursi
-                    </button>
-                </div>
-
-                <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200 flex flex-col justify-between hover:shadow-md transition-all">
-                    <div>
-                        <div class="w-10 h-10 bg-amber-600 text-white rounded-xl flex items-center justify-center mb-3">
-                            <i data-lucide="tent" class="w-5 h-5"></i>
-                        </div>
-                        <h5 class="font-bold text-slate-800 text-base">Tenda & Tarup</h5>
-                        <p class="text-xs text-slate-500 mt-1">2 Set Ukuran Standar</p>
-                    </div>
-                    <button onclick="openFasilitasModal('Tenda & Tarup')" class="mt-4 w-full bg-amber-600 hover:bg-amber-700 text-white font-bold py-2 rounded-xl text-xs transition-all flex items-center justify-center gap-1 shadow">
-                        <i data-lucide="box" class="w-3.5 h-3.5"></i> Pinjam Tenda
-                    </button>
+                <div class="flex flex-col sm:flex-row gap-3">
+                    <a href="https://wa.me/6281280717166?text=Halo%20Elvora%20Medika%20Solution,%20saya%20ingin%20konsultasi%20pengadaan%20BMHP" target="_blank" class="px-6 py-3.5 rounded-xl bg-white text-medical-900 font-bold text-xs hover:bg-slate-100 transition shadow-lg flex items-center justify-center gap-2">
+                        <i data-lucide="message-circle" class="w-4 h-4 text-emerald-600"></i> WhatsApp: 0812-8071-7166
+                    </a>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Section Karang Taruna -->
-    <section id="karang-taruna" class="container mx-auto my-10 px-4 scroll-mt-20">
-        <div class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-slate-200/80">
-            <div class="flex items-center gap-3 mb-4">
-                <div class="p-3 bg-blue-100 text-blue-700 rounded-xl"><i data-lucide="users-round" class="w-6 h-6"></i></div>
-                <div>
-                    <h3 class="text-xl font-bold text-slate-800">Karang Taruna RT 006</h3>
-                    <p class="text-sm text-slate-500">Wadah pemuda & pemudi lingkungan Vila Permata</p>
-                </div>
-            </div>
-            <p class="text-slate-600 text-sm leading-relaxed mb-4">
-                Karang Taruna aktif mendukung kegiatan kemasyarakatan, olahraga, peringatan hari besar nasional, serta kegiatan sosial warga RT 006.
-            </p>
-            <div class="inline-flex items-center gap-2 text-xs font-semibold text-blue-700 bg-blue-50 px-3 py-1.5 rounded-lg border border-blue-200">
-                <i data-lucide="sparkles" class="w-4 h-4"></i> Kegiatan Olahraga & Pemuda Aktif
-            </div>
-        </div>
-    </section>
+    </main>
 
     <!-- Footer -->
-    <footer class="bg-slate-900 text-slate-400 py-8 text-center text-xs border-t border-slate-800">
-        <div class="container mx-auto px-4">
-            <p>&copy; 2026 Pengurus RT 006 / RW 050 Vila Permata. All rights reserved.</p>
+    <footer class="bg-corporate-900 text-slate-400 border-t border-slate-800 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="space-y-3 md:col-span-2">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-10 h-10 rounded-xl bg-medical-600 flex items-center justify-center text-white">
+                            <i data-lucide="activity" class="w-5 h-5"></i>
+                        </div>
+                        <span class="text-lg font-bold text-white">ELVORA MEDIKA SOLUTION</span>
+                    </div>
+                    <p class="text-xs text-slate-400 max-w-sm leading-relaxed">
+                        Distributor resmi Bahan Medis Habis Pakai (BMHP) terpercaya untuk rumah sakit, klinik, dan laboratorium di seluruh Indonesia. Bergaransi steril, legalitas lengkap, dan harga kompetitif.
+                    </p>
+                </div>
+
+                <div class="space-y-3 text-xs">
+                    <h4 class="font-bold text-white text-sm uppercase tracking-wider">Kategori BMHP</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#katalog" class="hover:text-white transition">Infus & Transfusi Set</a></li>
+                        <li><a href="#katalog" class="hover:text-white transition">Alat Suntik & Jarum</a></li>
+                        <li><a href="#katalog" class="hover:text-white transition">Sarung Tangan Medis</a></li>
+                        <li><a href="#katalog" class="hover:text-white transition">Kasa & Perban Steril</a></li>
+                        <li><a href="#katalog" class="hover:text-white transition">Diagnostik & Lab</a></li>
+                    </ul>
+                </div>
+
+                <div class="space-y-3 text-xs">
+                    <h4 class="font-bold text-white text-sm uppercase tracking-wider">Kontak & Layanan</h4>
+                    <p>Hotline WA: <strong class="text-white">0812-8071-7166</strong></p>
+                    <p>Email: <strong class="text-white">info@elvoramedika.co.id</strong></p>
+                    <p>Jam Kerja: Senin - Sabtu (08.00 - 17.00 WIB)</p>
+                </div>
+            </div>
+
+            <div class="pt-8 border-t border-slate-800 flex flex-col sm:flex-row justify-between items-center text-xs text-slate-500 gap-4">
+                <p>&copy; 2026 Elvora Medika Solution. Hak Cipta Dilindungi Undang-Undang.</p>
+                <div class="flex space-x-4">
+                    <span class="hover:text-slate-400">Legalitas Kemenkes RI</span>
+                    <span>•</span>
+                    <span class="hover:text-slate-400">ISO Standard</span>
+                    <span>•</span>
+                    <span class="hover:text-slate-400">B2B Verified</span>
+                </div>
+            </div>
         </div>
     </footer>
 
-    <!-- Modal Form Pemesanan Fasilitas -->
-    <div id="fasilitasModal" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4 overflow-y-auto">
-        <div class="bg-white rounded-2xl max-w-lg w-full p-6 shadow-2xl relative">
-            <button onclick="closeFasilitasModal()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-600">
-                <i data-lucide="x" class="w-5 h-5"></i>
-            </button>
-            <div class="flex items-center gap-3 mb-5">
-                <div class="p-3 bg-emerald-100 text-emerald-700 rounded-xl">
-                    <i data-lucide="calendar" class="w-6 h-6"></i>
-                </div>
-                <div>
-                    <h4 class="text-xl font-bold text-slate-800">Pesan Fasilitas</h4>
-                    <p class="text-xs text-slate-500">Terhubung langsung ke Pengurus Fasum (WA: 085111302077)</p>
-                </div>
-            </div>
-
-            <form id="formFasilitas" onsubmit="submitFasilitas(event)" class="space-y-4">
-                <div>
-                    <label class="block text-xs font-bold text-slate-700 mb-1">Nama Pemesan</label>
-                    <input type="text" id="namaPemesan" placeholder="Contoh: Pak Ahmad" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:ring-2 focus:ring-emerald-400 focus:outline-none text-sm" required>
-                </div>
-                <div>
-                    <label class="block text-xs font-bold text-slate-700 mb-1">No. Rumah / Blok</label>
-                    <input type="text" id="blokPemesan" placeholder="Contoh: Blok C No. 5" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:ring-2 focus:ring-emerald-400 focus:outline-none text-sm" required>
-                </div>
-
-                <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
-                    <div class="sm:col-span-2">
-                        <label class="block text-xs font-bold text-slate-700 mb-1">Fasilitas yang Dipesan</label>
-                        <select id="jenisFasilitas" onchange="updateJumlahMax()" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:ring-2 focus:ring-emerald-400 focus:outline-none text-sm bg-white" required>
-                            <option value="Lapangan Olahraga">Lapangan Olahraga (Badminton/Voli)</option>
-                            <option value="Meja Plastik">Meja Plastik (Max: 4 Unit)</option>
-                            <option value="Kursi Plastik">Kursi Plastik (Max: 50 Unit)</option>
-                            <option value="Tenda & Tarup">Tenda & Tarup (Max: 2 Set)</option>
-                        </select>
-                    </div>
-                    <div id="wrapperJumlah">
-                        <label class="block text-xs font-bold text-slate-700 mb-1">Jumlah Pesanan</label>
-                        <div class="flex items-center">
-                            <input type="number" id="jumlahFasilitas" min="1" max="50" value="1" class="w-full px-3 py-2.5 rounded-xl border border-slate-300 focus:ring-2 focus:ring-emerald-400 focus:outline-none text-sm font-bold text-center" required>
-                            <span id="satuanText" class="text-xs font-semibold text-slate-500 ml-2">Sesi</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="grid grid-cols-2 gap-3">
-                    <div>
-                        <label class="block text-xs font-bold text-slate-700 mb-1">Tanggal Penggunaan</label>
-                        <input type="date" id="tglPakai" class="w-full px-3 py-2 rounded-xl border border-slate-300 focus:ring-2 focus:ring-emerald-400 focus:outline-none text-sm" required>
-                    </div>
-                    <div>
-                        <label class="block text-xs font-bold text-slate-700 mb-1">Jam / Durasi</label>
-                        <input type="text" id="jamPakai" placeholder="Contoh: 16.00 - 18.00 WIB" class="w-full px-3 py-2 rounded-xl border border-slate-300 focus:ring-2 focus:ring-emerald-400 focus:outline-none text-sm" required>
-                    </div>
-                </div>
-                <div>
-                    <label class="block text-xs font-bold text-slate-700 mb-1">Catatan Tambahan / Keperluan</label>
-                    <textarea id="catatanFasilitas" rows="2" placeholder="Tuliskan keperluan acara..." class="w-full px-4 py-2 rounded-xl border border-slate-300 focus:ring-2 focus:ring-emerald-400 focus:outline-none text-sm"></textarea>
-                </div>
-                <button type="submit" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3 rounded-xl shadow transition-all flex items-center justify-center gap-2 text-sm">
-                    <i data-lucide="send" class="w-4 h-4"></i> Kirim Pesanan via WhatsApp
-                </button>
-            </form>
-        </div>
-    </div>
-
-    <!-- Modal Form Aspirasi Warga -->
-    <div id="aspirasiModal" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4 overflow-y-auto">
-        <div class="bg-white rounded-2xl max-w-lg w-full p-6 shadow-2xl relative">
-            <button onclick="closeAspirasiModal()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-600">
-                <i data-lucide="x" class="w-5 h-5"></i>
-            </button>
-            <div class="flex items-center gap-3 mb-5">
-                <div class="p-3 bg-amber-100 text-amber-700 rounded-xl">
-                    <i data-lucide="message-square-plus" class="w-6 h-6"></i>
-                </div>
-                <div>
-                    <h4 class="text-xl font-bold text-slate-800">Form Aspirasi & Laporan Warga</h4>
-                    <p class="text-xs text-slate-500">Terhubung langsung ke Sekretariat RT (WA: 08128077166)</p>
-                </div>
-            </div>
-
-            <form id="formAspirasi" onsubmit="submitAspirasi(event)" class="space-y-4">
-                <div>
-                    <label class="block text-xs font-bold text-slate-700 mb-1">Nama Lengkap Warga</label>
-                    <input type="text" id="namaWarga" placeholder="Contoh: Pak Budi" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:ring-2 focus:ring-amber-400 focus:outline-none text-sm" required>
-                </div>
-                <div>
-                    <label class="block text-xs font-bold text-slate-700 mb-1">No. Rumah / Blok</label>
-                    <input type="text" id="blokRumah" placeholder="Contoh: Blok A No. 12" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:ring-2 focus:ring-amber-400 focus:outline-none text-sm" required>
-                </div>
-                <div>
-                    <label class="block text-xs font-bold text-slate-700 mb-1">Kategori Laporan</label>
-                    <select id="kategoriLaporan" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:ring-2 focus:ring-amber-400 focus:outline-none text-sm bg-white" required>
-                        <option value="Saran & Aspirasi">Saran & Aspirasi Kemajuan RT</option>
-                        <option value="Laporan Kebersihan">Laporan Kebersihan / Sampah</option>
-                        <option value="Laporan Keamanan">Laporan Keamanan & Ketertiban</option>
-                        <option value="Fasilitas Lampu/Jalan">Laporan Kerusakan Fasilitas / Lampu Jalan</option>
-                        <option value="Lainnya">Lainnya</option>
-                    </select>
-                </div>
-                <div>
-                    <label class="block text-xs font-bold text-slate-700 mb-1">Isi Aspirasi / Pesan Laporan</label>
-                    <textarea id="isiPesan" rows="3" placeholder="Tuliskan isi masukan atau laporan Anda secara jelas..." class="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:ring-2 focus:ring-amber-400 focus:outline-none text-sm" required></textarea>
-                </div>
-                <button type="submit" class="w-full bg-amber-400 hover:bg-amber-500 text-slate-950 font-bold py-3 rounded-xl shadow transition-all flex items-center justify-center gap-2 text-sm">
-                    <i data-lucide="send" class="w-4 h-4"></i> Kirim Aspirasi via WhatsApp
-                </button>
-            </form>
-        </div>
-    </div>
-
-    <!-- Modal Login Area Pengurus -->
-    <div id="adminModal" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
-        <div class="bg-white rounded-2xl max-w-md w-full p-6 shadow-2xl relative">
-            <button onclick="closeAdminModal()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-600">
-                <i data-lucide="x" class="w-5 h-5"></i>
-            </button>
-            <div class="text-center mb-6">
-                <div class="w-12 h-12 bg-amber-100 text-amber-600 rounded-full flex items-center justify-center mx-auto mb-3">
-                    <i data-lucide="lock" class="w-6 h-6"></i>
-                </div>
-                <h4 class="text-xl font-bold text-slate-800">Akses Area Pengurus</h4>
-                <p class="text-xs text-slate-500 mt-1">Masukkan Kode PIN Pengurus untuk membuka Master Data Spreadsheet Kas</p>
-            </div>
-            <form onsubmit="verifyAdmin(event)" class="space-y-4">
-                <div>
-                    <label class="block text-xs font-bold text-slate-700 mb-1">Kode PIN Pengurus</label>
-                    <input type="password" id="adminPin" placeholder="Masukkan Kode PIN" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:ring-2 focus:ring-amber-400 focus:outline-none text-center font-mono text-lg tracking-widest" required>
-                    <p id="pinError" class="text-xs text-red-500 mt-1.5 hidden">Kode PIN salah! Silakan hubungi Sekretaris/Ketua RT.</p>
-                </div>
-                <button type="submit" class="w-full bg-amber-400 hover:bg-amber-500 text-slate-950 font-bold py-2.5 rounded-xl shadow transition-all">
-                    Buka Spreadsheet Pengurus
-                </button>
-            </form>
-        </div>
-    </div>
-
-    <!-- JAVASCRIPT LOGIC -->
+    <!-- SCRIPT INTERACTIVE & WHATSAPP REDIRECTION -->
     <script>
-        // Menggunakan teknik JSONP / Script Injection agar terhindar dari blokir CORS GitHub Pages
-        function loadKeuanganSpreadsheet() {
-            // Jika Anda ingin langsung memasukkan nilai secara stabil tanpa kendala jaringan, 
-            // kita bisa kalkulasi otomatis atau sediakan fallback data manual yang langsung sinkron.
-            // Di sini kita gunakan penarikan data via CORS proxy alternatif yang lebih stabil (corsproxy.io)
-            const csvUrl = "https://docs.google.com/spreadsheets/d/e/2PACX-1vS-ML7nAfcWoYOZGJAlJ_MIe9twIPZONoinVjyXXtDTg_e1s13gZNOWXMYI_QuDSZ7W45RFQhRF90Y-/pub?gid=628329725&single=true&output=csv";
-            const proxyUrl = "https://corsproxy.io/?";
-
-            fetch(proxyUrl + encodeURIComponent(csvUrl))
-                .then(response => {
-                    if (!response.ok) throw new Error("Network response was not ok");
-                    return response.text();
-                })
-                .then(csvText => {
-                    const rows = csvText.split('\n').map(row => row.split(','));
-                    let totalMasuk = 0;
-                    let totalKeluar = 0;
-
-                    for (let i = 0; i < rows.length; i++) {
-                        for (let j = 0; j < rows[i].length; j++) {
-                            const cellText = rows[i][j] ? rows[i][j].trim().toLowerCase() : "";
-                            if (cellText.includes("uang masuk") || cellText.includes("pemasukan")) {
-                                for (let k = j + 1; k < rows[i].length; k++) {
-                                    const valText = rows[i][k] ? rows[i][k].replace(/[^0-9]/g, "") : "";
-                                    if (valText.length > 0) {
-                                        totalMasuk = parseFloat(valText) || 0;
-                                        break;
-                                    }
-                                }
-                            }
-                            if (cellText.includes("uang keluar") || cellText.includes("pengeluaran")) {
-                                for (let k = j + 1; k < rows[i].length; k++) {
-                                    const valText = rows[i][k] ? rows[i][k].replace(/[^0-9]/g, "") : "";
-                                    if (valText.length > 0) {
-                                        totalKeluar = parseFloat(valText) || 0;
-                                        break;
-                                    }
-                                }
-                            }
-                        }
-                    }
-
-                    // Fallback jika pencarian teks baris atas belum tertangkap sempurna, hitung dari tabel bawah
-                    if (totalMasuk === 0 && totalKeluar === 0) {
-                        for (let i = 8; i < rows.length; i++) {
-                            if (rows[i] && rows[i].length >= 6) {
-                                const masukVal = rows[i][4] ? parseFloat(rows[i][4].replace(/[^0-9]/g, "")) || 0 : 0;
-                                const keluarVal = rows[i][5] ? parseFloat(rows[i][5].replace(/[^0-9]/g, "")) || 0 : 0;
-                                totalMasuk += masukVal;
-                                totalKeluar += keluarVal;
-                            }
-                        }
-                    }
-
-                    const saldoTerkini = totalMasuk - totalKeluar;
-
-                    document.getElementById('total-masuk').innerText = formatRupiah(totalMasuk);
-                    document.getElementById('total-keluar').innerText = formatRupiah(totalKeluar);
-                    document.getElementById('saldo-terkini').innerText = formatRupiah(saldoTerkini);
-                })
-                .catch(error => {
-                    console.warn("Menggunakan data default ter-sync karena jaringan:", error);
-                    // Fallback otomatis agar web tidak pernah memunculkan "Gagal memuat"
-                    document.getElementById('total-masuk').innerText = formatRupiah(23850000);
-                    document.getElementById('total-keluar').innerText = formatRupiah(19770000);
-                    document.getElementById('saldo-terkini').innerText = formatRupiah(23850000 - 19770000);
-                });
-        }
-
-        function formatRupiah(angka) {
-            return new Intl.NumberFormat('id-ID', {
-                style: 'currency',
-                currency: 'IDR',
-                maximumFractionDigits: 0
-            }).format(angka || 0);
-        }
-
-        // Navigation & Modals
-        const menuBtn = document.getElementById('mobile-menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-        if (menuBtn && mobileMenu) {
-            menuBtn.addEventListener('click', () => { mobileMenu.classList.toggle('hidden'); });
-        }
-        function closeMobileMenu() { if (mobileMenu) mobileMenu.classList.add('hidden'); }
-
-        function openFasilitasModal(namaFasilitas) {
-            document.getElementById('fasilitasModal').classList.remove('hidden');
-            if (namaFasilitas) {
-                document.getElementById('jenisFasilitas').value = namaFasilitas;
-                updateJumlahMax();
-            }
-        }
-        function closeFasilitasModal() { document.getElementById('fasilitasModal').classList.add('hidden'); }
-
-        function updateJumlahMax() {
-            const barang = document.getElementById('jenisFasilitas').value;
-            const inputJumlah = document.getElementById('jumlahFasilitas');
-            const satuanText = document.getElementById('satuanText');
-
-            if (barang === "Meja Plastik") {
-                inputJumlah.max = 4; inputJumlah.value = 1; satuanText.innerText = "Unit";
-            } else if (barang === "Kursi Plastik") {
-                inputJumlah.max = 50; inputJumlah.value = 10; satuanText.innerText = "Unit";
-            } else if (barang === "Tenda & Tarup") {
-                inputJumlah.max = 2; inputJumlah.value = 1; satuanText.innerText = "Set";
-            } else if (barang === "Lapangan Olahraga") {
-                inputJumlah.max = 1; inputJumlah.value = 1; satuanText.innerText = "Sesi";
-            }
-        }
-
-        function submitFasilitas(e) {
-            e.preventDefault();
-            const nama = document.getElementById('namaPemesan').value;
-            const blok = document.getElementById('blokPemesan').value;
-            const barang = document.getElementById('jenisFasilitas').value;
-            const jumlah = document.getElementById('jumlahFasilitas').value;
-            const satuan = document.getElementById('satuanText').innerText;
-            const tgl = document.getElementById('tglPakai').value;
-            const jam = document.getElementById('jamPakai').value;
-            const catatan = document.getElementById('catatanFasilitas').value;
-            
-            const noWA = "6285111302077";
-            const textWA = `Halo Pengurus RT 006 (Fasum/Inventaris), saya mau mengajukan pemesanan/peminjaman fasilitas:\n\n👤 *Nama:* ${nama}\n🏠 *Rumah:* ${blok}\n📦 *Fasilitas:* ${barang}\n🔢 *Jumlah:* ${jumlah} ${satuan}\n📅 *Tanggal:* ${tgl}\n⏰ *Jam/Durasi:* ${jam}\n📝 *Catatan:* ${catatan || '-'}`;
-            window.open(`https://wa.me/${noWA}?text=${encodeURIComponent(textWA)}`, '_blank');
-            closeFasilitasModal();
-            document.getElementById('formFasilitas').reset();
-        }
-
-        function openAspirasiModal() { document.getElementById('aspirasiModal').classList.remove('hidden'); }
-        function closeAspirasiModal() { document.getElementById('aspirasiModal').classList.add('hidden'); }
-
-        function submitAspirasi(e) {
-            e.preventDefault();
-            const nama = document.getElementById('namaWarga').value;
-            const blok = document.getElementById('blokRumah').value;
-            const kategori = document.getElementById('kategoriLaporan').value;
-            const pesan = document.getElementById('isiPesan').value;
-            
-            const noWA = "628128077166";
-            const textWA = `Halo Pengurus RT 006, saya menyampaikan aspirasi/laporan via Portal Web:\n\n👤 *Nama:* ${nama}\n🏠 *Rumah:* ${blok}\n📋 *Kategori:* ${kategori}\n💬 *Pesan:* ${pesan}`;
-            window.open(`https://wa.me/${noWA}?text=${encodeURIComponent(textWA)}`, '_blank');
-            closeAspirasiModal();
-            document.getElementById('formAspirasi').reset();
-        }
-
-        const PIN_PENGURUS_RAHASIA = "006";
-        const LINK_SPREADSHEET = "https://docs.google.com/spreadsheets/d/1zgfn-dXDM7a9rn-Niw6BFQbP5JLRJDUN4SSQkdM7_GI/edit";
-
-        function openAdminModal() { document.getElementById('adminModal').classList.remove('hidden'); }
-        function closeAdminModal() {
-            document.getElementById('adminModal').classList.add('hidden');
-            document.getElementById('pinError').classList.add('hidden');
-        }
-
-        function verifyAdmin(e) {
-            e.preventDefault();
-            const inputPin = document.getElementById('adminPin').value;
-            if (inputPin === PIN_PENGURUS_RAHASIA) {
-                window.open(LINK_SPREADSHEET, '_blank');
-                closeAdminModal();
-            } else {
-                document.getElementById('pinError').classList.remove('hidden');
-            }
-        }
-
-        document.addEventListener("DOMContentLoaded", () => {
-            loadKeuanganSpreadsheet();
-            if (typeof lucide !== 'undefined') {
-                lucide.createIcons();
-            }
+        document.addEventListener('DOMContentLoaded', () => {
+            lucide.createIcons();
         });
+
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+
+        function filterCatalog(category) {
+            // Update active button styling
+            const buttons = document.querySelectorAll('.cat-btn');
+            buttons.forEach(btn => {
+                btn.className = "cat-btn px-4 py-2 rounded-xl text-xs font-semibold bg-white text-slate-600 border border-slate-200 hover:bg-slate-50 transition";
+            });
+            event.target.className = "cat-btn px-4 py-2 rounded-xl text-xs font-bold bg-medical-600 text-white shadow-sm transition";
+
+            // Filter cards
+            const cards = document.querySelectorAll('.product-card');
+            cards.forEach(card => {
+                if (category === 'all' || card.getAttribute('data-category') === category) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        function searchCatalogItems() {
+            const query = document.getElementById('search-product').value.toLowerCase();
+            const cards = document.querySelectorAll('.product-card');
+            cards.forEach(card => {
+                const title = card.querySelector('h3').innerText.toLowerCase();
+                const desc = card.querySelector('p').innerText.toLowerCase();
+                if (title.includes(query) || desc.includes(query)) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        function orderViaWhatsApp(productName, minOrder) {
+            const phoneNumber = "6281280717166";
+            const message = `Halo Elvora Medika Solution,\n\nSaya ingin memesan / meminta penawaran harga untuk produk BMHP berikut:\n\n*Nama Produk:* ${productName}\n*Kemasan / Min. Order:* ${minOrder}\n\nMohon konfirmasi ketersediaan stok dan rincian pengirimannya. Terima kasih.`;
+            const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+            window.open(url, '_blank');
+        }
     </script>
 </body>
 </html>
