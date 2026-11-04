@@ -163,7 +163,7 @@
                                         </div>
                                         <div>
                                             <h3 class="font-bold text-white text-sm">Elvora Express Order</h3>
-                                            <p class="text-xs text-slate-400">Pemesanan Instan Langsung ke WhatsApp</p>
+                                            <p class="text-xs text-slate-400">Pemesanan Instan & E-commerce</p>
                                         </div>
                                     </div>
                                     <span class="w-3 h-3 rounded-full bg-emerald-500 animate-ping"></span>
@@ -174,11 +174,11 @@
                                         <i data-lucide="check-circle-2" class="w-4 h-4 text-medical-400"></i>
                                     </div>
                                     <div class="p-3 bg-slate-800/80 rounded-xl border border-slate-700/60 flex items-center justify-between text-xs">
-                                        <span class="text-slate-300 font-medium">2. Klik "Pesan via WhatsApp"</span>
+                                        <span class="text-slate-300 font-medium">2. Pesan via WhatsApp / Marketplace</span>
                                         <i data-lucide="check-circle-2" class="w-4 h-4 text-medical-400"></i>
                                     </div>
                                     <div class="p-3 bg-slate-800/80 rounded-xl border border-slate-700/60 flex items-center justify-between text-xs">
-                                        <span class="text-slate-300 font-medium">3. Konfirmasi Quotation & Pengiriman</span>
+                                        <span class="text-slate-300 font-medium">3. Pengiriman Aman & Cepat se-Indonesia</span>
                                         <i data-lucide="check-circle-2" class="w-4 h-4 text-medical-400"></i>
                                     </div>
                                 </div>
@@ -200,7 +200,7 @@
                         <i data-lucide="boxes" class="w-3.5 h-3.5"></i> Katalog Produk Unggulan
                     </div>
                     <h2 class="text-2xl sm:text-3xl font-extrabold text-corporate-900">Aneka Produk Bahan Medis Habis Pakai (BMHP)</h2>
-                    <p class="text-sm text-slate-600 mt-1">Klik tombol <span class="font-bold text-emerald-600">"Pesan via WhatsApp"</span> pada produk pilihan untuk terhubung langsung dengan tim sales kami.</p>
+                    <p class="text-sm text-slate-600 mt-1">Pesan langsung melalui <span class="font-bold text-emerald-600">WhatsApp</span>, <span class="font-bold text-orange-600">Shopee</span>, atau <span class="font-bold text-emerald-700">Tokopedia</span>.</p>
                 </div>
 
                 <!-- Kategori Filter Tabs -->
@@ -222,6 +222,7 @@
 
             <!-- Product Grid -->
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="product-grid">
+                
                 <!-- Produk 1 -->
                 <div class="product-card bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-lg transition flex flex-col justify-between overflow-hidden group" data-category="infus">
                     <div class="p-5 space-y-3">
@@ -243,10 +244,19 @@
                             <span class="font-extrabold text-medical-700">Harga Grosir B2B</span>
                         </div>
                     </div>
-                    <div class="p-4 bg-slate-50 border-t border-slate-100">
-                        <button onclick="orderViaWhatsApp('Infus Set Makro / Mikro (IV Set)', '1 Box (50 pcs)')" class="w-full py-2.5 rounded-xl bg-medical-600 hover:bg-medical-700 text-white font-bold text-xs transition flex items-center justify-center gap-2 shadow-sm shadow-medical-500/20">
+                    <!-- Action Buttons: WhatsApp & E-commerce -->
+                    <div class="p-4 bg-slate-50 border-t border-slate-100 space-y-2">
+                        <button onclick="orderViaWhatsApp('Infus Set Makro / Mikro (IV Set)', '1 Box (50 pcs)')" class="w-full py-2 rounded-xl bg-medical-600 hover:bg-medical-700 text-white font-bold text-xs transition flex items-center justify-center gap-2 shadow-sm shadow-medical-500/20">
                             <i data-lucide="message-circle" class="w-4 h-4"></i> Pesan via WhatsApp
                         </button>
+                        <div class="grid grid-cols-2 gap-2">
+                            <a href="https://shopee.co.id" target="_blank" class="py-2 rounded-lg bg-orange-50 hover:bg-orange-100 text-orange-600 border border-orange-200 font-bold text-[11px] transition flex items-center justify-center gap-1.5">
+                                <i data-lucide="shopping-bag" class="w-3.5 h-3.5"></i> Shopee
+                            </a>
+                            <a href="https://tokopedia.com" target="_blank" class="py-2 rounded-lg bg-emerald-50 hover:bg-emerald-100 text-emerald-700 border border-emerald-200 font-bold text-[11px] transition flex items-center justify-center gap-1.5">
+                                <i data-lucide="store" class="w-3.5 h-3.5"></i> Tokopedia
+                            </a>
+                        </div>
                     </div>
                 </div>
 
@@ -271,10 +281,19 @@
                             <span class="font-extrabold text-medical-700">Harga Grosir B2B</span>
                         </div>
                     </div>
-                    <div class="p-4 bg-slate-50 border-t border-slate-100">
-                        <button onclick="orderViaWhatsApp('Spuit / Syringe 3cc & 5cc with Needle', '1 Box (100 pcs)')" class="w-full py-2.5 rounded-xl bg-medical-600 hover:bg-medical-700 text-white font-bold text-xs transition flex items-center justify-center gap-2 shadow-sm shadow-medical-500/20">
+                    <!-- Action Buttons: WhatsApp & E-commerce -->
+                    <div class="p-4 bg-slate-50 border-t border-slate-100 space-y-2">
+                        <button onclick="orderViaWhatsApp('Spuit / Syringe 3cc & 5cc with Needle', '1 Box (100 pcs)')" class="w-full py-2 rounded-xl bg-medical-600 hover:bg-medical-700 text-white font-bold text-xs transition flex items-center justify-center gap-2 shadow-sm shadow-medical-500/20">
                             <i data-lucide="message-circle" class="w-4 h-4"></i> Pesan via WhatsApp
                         </button>
+                        <div class="grid grid-cols-2 gap-2">
+                            <a href="https://shopee.co.id" target="_blank" class="py-2 rounded-lg bg-orange-50 hover:bg-orange-100 text-orange-600 border border-orange-200 font-bold text-[11px] transition flex items-center justify-center gap-1.5">
+                                <i data-lucide="shopping-bag" class="w-3.5 h-3.5"></i> Shopee
+                            </a>
+                            <a href="https://tokopedia.com" target="_blank" class="py-2 rounded-lg bg-emerald-50 hover:bg-emerald-100 text-emerald-700 border border-emerald-200 font-bold text-[11px] transition flex items-center justify-center gap-1.5">
+                                <i data-lucide="store" class="w-3.5 h-3.5"></i> Tokopedia
+                            </a>
+                        </div>
                     </div>
                 </div>
 
@@ -299,10 +318,19 @@
                             <span class="font-extrabold text-medical-700">Harga Grosir B2B</span>
                         </div>
                     </div>
-                    <div class="p-4 bg-slate-50 border-t border-slate-100">
-                        <button onclick="orderViaWhatsApp('Handscoon / Sarung Tangan Lateks', '1 Box (100 pcs)')" class="w-full py-2.5 rounded-xl bg-medical-600 hover:bg-medical-700 text-white font-bold text-xs transition flex items-center justify-center gap-2 shadow-sm shadow-medical-500/20">
+                    <!-- Action Buttons: WhatsApp & E-commerce -->
+                    <div class="p-4 bg-slate-50 border-t border-slate-100 space-y-2">
+                        <button onclick="orderViaWhatsApp('Handscoon / Sarung Tangan Lateks', '1 Box (100 pcs)')" class="w-full py-2 rounded-xl bg-medical-600 hover:bg-medical-700 text-white font-bold text-xs transition flex items-center justify-center gap-2 shadow-sm shadow-medical-500/20">
                             <i data-lucide="message-circle" class="w-4 h-4"></i> Pesan via WhatsApp
                         </button>
+                        <div class="grid grid-cols-2 gap-2">
+                            <a href="https://shopee.co.id" target="_blank" class="py-2 rounded-lg bg-orange-50 hover:bg-orange-100 text-orange-600 border border-orange-200 font-bold text-[11px] transition flex items-center justify-center gap-1.5">
+                                <i data-lucide="shopping-bag" class="w-3.5 h-3.5"></i> Shopee
+                            </a>
+                            <a href="https://tokopedia.com" target="_blank" class="py-2 rounded-lg bg-emerald-50 hover:bg-emerald-100 text-emerald-700 border border-emerald-200 font-bold text-[11px] transition flex items-center justify-center gap-1.5">
+                                <i data-lucide="store" class="w-3.5 h-3.5"></i> Tokopedia
+                            </a>
+                        </div>
                     </div>
                 </div>
 
@@ -327,10 +355,19 @@
                             <span class="font-extrabold text-medical-700">Harga Grosir B2B</span>
                         </div>
                     </div>
-                    <div class="p-4 bg-slate-50 border-t border-slate-100">
-                        <button onclick="orderViaWhatsApp('Kasa Steril & Perban Gulung (Absorbent Gauze)', '1 Pack (10 Roll)')" class="w-full py-2.5 rounded-xl bg-medical-600 hover:bg-medical-700 text-white font-bold text-xs transition flex items-center justify-center gap-2 shadow-sm shadow-medical-500/20">
+                    <!-- Action Buttons: WhatsApp & E-commerce -->
+                    <div class="p-4 bg-slate-50 border-t border-slate-100 space-y-2">
+                        <button onclick="orderViaWhatsApp('Kasa Steril & Perban Gulung (Absorbent Gauze)', '1 Pack (10 Roll)')" class="w-full py-2 rounded-xl bg-medical-600 hover:bg-medical-700 text-white font-bold text-xs transition flex items-center justify-center gap-2 shadow-sm shadow-medical-500/20">
                             <i data-lucide="message-circle" class="w-4 h-4"></i> Pesan via WhatsApp
                         </button>
+                        <div class="grid grid-cols-2 gap-2">
+                            <a href="https://shopee.co.id" target="_blank" class="py-2 rounded-lg bg-orange-50 hover:bg-orange-100 text-orange-600 border border-orange-200 font-bold text-[11px] transition flex items-center justify-center gap-1.5">
+                                <i data-lucide="shopping-bag" class="w-3.5 h-3.5"></i> Shopee
+                            </a>
+                            <a href="https://tokopedia.com" target="_blank" class="py-2 rounded-lg bg-emerald-50 hover:bg-emerald-100 text-emerald-700 border border-emerald-200 font-bold text-[11px] transition flex items-center justify-center gap-1.5">
+                                <i data-lucide="store" class="w-3.5 h-3.5"></i> Tokopedia
+                            </a>
+                        </div>
                     </div>
                 </div>
 
@@ -355,10 +392,19 @@
                             <span class="font-extrabold text-medical-700">Harga Grosir B2B</span>
                         </div>
                     </div>
-                    <div class="p-4 bg-slate-50 border-t border-slate-100">
-                        <button onclick="orderViaWhatsApp('Blood Lancet & Vacutainer Blood Collection Tube', '1 Rack (100 pcs)')" class="w-full py-2.5 rounded-xl bg-medical-600 hover:bg-medical-700 text-white font-bold text-xs transition flex items-center justify-center gap-2 shadow-sm shadow-medical-500/20">
+                    <!-- Action Buttons: WhatsApp & E-commerce -->
+                    <div class="p-4 bg-slate-50 border-t border-slate-100 space-y-2">
+                        <button onclick="orderViaWhatsApp('Blood Lancet & Vacutainer Blood Collection Tube', '1 Rack (100 pcs)')" class="w-full py-2 rounded-xl bg-medical-600 hover:bg-medical-700 text-white font-bold text-xs transition flex items-center justify-center gap-2 shadow-sm shadow-medical-500/20">
                             <i data-lucide="message-circle" class="w-4 h-4"></i> Pesan via WhatsApp
                         </button>
+                        <div class="grid grid-cols-2 gap-2">
+                            <a href="https://shopee.co.id" target="_blank" class="py-2 rounded-lg bg-orange-50 hover:bg-orange-100 text-orange-600 border border-orange-200 font-bold text-[11px] transition flex items-center justify-center gap-1.5">
+                                <i data-lucide="shopping-bag" class="w-3.5 h-3.5"></i> Shopee
+                            </a>
+                            <a href="https://tokopedia.com" target="_blank" class="py-2 rounded-lg bg-emerald-50 hover:bg-emerald-100 text-emerald-700 border border-emerald-200 font-bold text-[11px] transition flex items-center justify-center gap-1.5">
+                                <i data-lucide="store" class="w-3.5 h-3.5"></i> Tokopedia
+                            </a>
+                        </div>
                     </div>
                 </div>
 
@@ -383,187 +429,129 @@
                             <span class="font-extrabold text-medical-700">Harga Grosir B2B</span>
                         </div>
                     </div>
-                    <div class="p-4 bg-slate-50 border-t border-slate-100">
-                        <button onclick="orderViaWhatsApp('Sarung Tangan Bedah Steril (Surgical Gloves)', '1 Box (50 pasang)')" class="w-full py-2.5 rounded-xl bg-medical-600 hover:bg-medical-700 text-white font-bold text-xs transition flex items-center justify-center gap-2 shadow-sm shadow-medical-500/20">
+                    <!-- Action Buttons: WhatsApp & E-commerce -->
+                    <div class="p-4 bg-slate-50 border-t border-slate-100 space-y-2">
+                        <button onclick="orderViaWhatsApp('Sarung Tangan Bedah Steril (Surgical Gloves)', '1 Box (50 pasang)')" class="w-full py-2 rounded-xl bg-medical-600 hover:bg-medical-700 text-white font-bold text-xs transition flex items-center justify-center gap-2 shadow-sm shadow-medical-500/20">
                             <i data-lucide="message-circle" class="w-4 h-4"></i> Pesan via WhatsApp
                         </button>
+                        <div class="grid grid-cols-2 gap-2">
+                            <a href="https://shopee.co.id" target="_blank" class="py-2 rounded-lg bg-orange-50 hover:bg-orange-100 text-orange-600 border border-orange-200 font-bold text-[11px] transition flex items-center justify-center gap-1.5">
+                                <i data-lucide="shopping-bag" class="w-3.5 h-3.5"></i> Shopee
+                            </a>
+                            <a href="https://tokopedia.com" target="_blank" class="py-2 rounded-lg bg-emerald-50 hover:bg-emerald-100 text-emerald-700 border border-emerald-200 font-bold text-[11px] transition flex items-center justify-center gap-1.5">
+                                <i data-lucide="store" class="w-3.5 h-3.5"></i> Tokopedia
+                            </a>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Produk 7 -->
-                <div class="product-card bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-lg transition flex flex-col justify-between overflow-hidden group" data-category="infus">
-                    <div class="p-5 space-y-3">
-                        <div class="flex items-center justify-between">
-                            <span class="px-2.5 py-1 rounded-full text-[10px] font-bold bg-emerald-50 text-emerald-700 border border-emerald-200">Infus & Transfusi</span>
-                            <span class="text-xs font-semibold text-slate-400">Ready Stock</span>
-                        </div>
-                        <div class="h-40 rounded-xl bg-slate-100 flex items-center justify-center text-emerald-600 overflow-hidden relative group-hover:bg-emerald-50 transition">
-                            <div class="absolute inset-0 bg-gradient-to-tr from-emerald-900/10 to-transparent"></div>
-                            <i data-lucide="activity" class="w-16 h-16 text-emerald-500 group-hover:scale-110 transition duration-300"></i>
-                            <span class="absolute bottom-2 left-2 text-[10px] bg-white/90 px-2 py-0.5 rounded font-bold text-slate-700">Blood Transfusion Set</span>
-                        </div>
-                        <div>
-                            <h3 class="font-bold text-slate-900 text-base">Blood Transfusion Set (Set Transfusi Darah)</h3>
-                            <p class="text-xs text-slate-500 mt-1">Perangkat infus khusus transfusi darah dengan filter mikro ganda yang aman dan steril.</p>
-                        </div>
-                        <div class="pt-2 flex items-center justify-between border-t border-slate-100 text-xs">
-                            <span class="text-slate-400">Min. Order: <strong class="text-slate-700">1 Box (50 pcs)</strong></span>
-                            <span class="font-extrabold text-medical-700">Harga Grosir B2B</span>
-                        </div>
-                    </div>
-                    <div class="p-4 bg-slate-50 border-t border-slate-100">
-                        <button onclick="orderViaWhatsApp('Blood Transfusion Set (Set Transfusi Darah)', '1 Box (50 pcs)')" class="w-full py-2.5 rounded-xl bg-medical-600 hover:bg-medical-700 text-white font-bold text-xs transition flex items-center justify-center gap-2 shadow-sm shadow-medical-500/20">
-                            <i data-lucide="message-circle" class="w-4 h-4"></i> Pesan via WhatsApp
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Produk 8 -->
-                <div class="product-card bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-lg transition flex flex-col justify-between overflow-hidden group" data-category="diagnostik">
-                    <div class="p-5 space-y-3">
-                        <div class="flex items-center justify-between">
-                            <span class="px-2.5 py-1 rounded-full text-[10px] font-bold bg-purple-50 text-purple-700 border border-purple-200">Diagnostik & Lab</span>
-                            <span class="text-xs font-semibold text-slate-400">Ready Stock</span>
-                        </div>
-                        <div class="h-40 rounded-xl bg-slate-100 flex items-center justify-center text-purple-600 overflow-hidden relative group-hover:bg-purple-50 transition">
-                            <div class="absolute inset-0 bg-gradient-to-tr from-purple-900/10 to-transparent"></div>
-                            <i data-lucide="test-tubes" class="w-16 h-16 text-purple-500 group-hover:scale-110 transition duration-300"></i>
-                            <span class="absolute bottom-2 left-2 text-[10px] bg-white/90 px-2 py-0.5 rounded font-bold text-slate-700">Rapid Test Kit</span>
-                        </div>
-                        <div>
-                            <h3 class="font-bold text-slate-900 text-base">Alat Tes Rapid Antigen & Multi Drug Test</h3>
-                            <p class="text-xs text-slate-500 mt-1">Kit tes cepat diagnostik akurasi tinggi untuk skrining kesehatan mandiri dan instansi.</p>
-                        </div>
-                        <div class="pt-2 flex items-center justify-between border-t border-slate-100 text-xs">
-                            <span class="text-slate-400">Min. Order: <strong class="text-slate-700">1 Box (25 test)</strong></span>
-                            <span class="font-extrabold text-medical-700">Harga Grosir B2B</span>
-                        </div>
-                    </div>
-                    <div class="p-4 bg-slate-50 border-t border-slate-100">
-                        <button onclick="orderViaWhatsApp('Alat Tes Rapid Antigen & Multi Drug Test', '1 Box (25 test)')" class="w-full py-2.5 rounded-xl bg-medical-600 hover:bg-medical-700 text-white font-bold text-xs transition flex items-center justify-center gap-2 shadow-sm shadow-medical-500/20">
-                            <i data-lucide="message-circle" class="w-4 h-4"></i> Pesan via WhatsApp
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Produk 9 -->
-                <div class="product-card bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-lg transition flex flex-col justify-between overflow-hidden group" data-category="perban">
-                    <div class="p-5 space-y-3">
-                        <div class="flex items-center justify-between">
-                            <span class="px-2.5 py-1 rounded-full text-[10px] font-bold bg-amber-50 text-amber-700 border border-amber-200">Perban & Bedah</span>
-                            <span class="text-xs font-semibold text-slate-400">Ready Stock</span>
-                        </div>
-                        <div class="h-40 rounded-xl bg-slate-100 flex items-center justify-center text-amber-600 overflow-hidden relative group-hover:bg-amber-50 transition">
-                            <div class="absolute inset-0 bg-gradient-to-tr from-amber-900/10 to-transparent"></div>
-                            <i data-lucide="first-aid-kit" class="w-16 h-16 text-amber-500 group-hover:scale-110 transition duration-300"></i>
-                            <span class="absolute bottom-2 left-2 text-[10px] bg-white/90 px-2 py-0.5 rounded font-bold text-slate-700">Elastic Bandage</span>
-                        </div>
-                        <div>
-                            <h3 class="font-bold text-slate-900 text-base">Elastic Bandage / Verban Elastis (3 inch & 4 inch)</h3>
-                            <p class="text-xs text-slate-500 mt-1">Perban elastis medis untuk fiksasi cedera otot, keseleo, dan penunjang ortopedi.</p>
-                        </div>
-                        <div class="pt-2 flex items-center justify-between border-t border-slate-100 text-xs">
-                            <span class="text-slate-400">Min. Order: <strong class="text-slate-700">1 Box (12 roll)</strong></span>
-                            <span class="font-extrabold text-medical-700">Harga Grosir B2B</span>
-                        </div>
-                    </div>
-                    <div class="p-4 bg-slate-50 border-t border-slate-100">
-                        <button onclick="orderViaWhatsApp('Elastic Bandage / Verban Elastis (3 inch & 4 inch)', '1 Box (12 roll)')" class="w-full py-2.5 rounded-xl bg-medical-600 hover:bg-medical-700 text-white font-bold text-xs transition flex items-center justify-center gap-2 shadow-sm shadow-medical-500/20">
-                            <i data-lucide="message-circle" class="w-4 h-4"></i> Pesan via WhatsApp
-                        </button>
-                    </div>
-                </div>
             </div>
         </section>
 
-        <!-- LAYANAN B2B & RUMAH SAKIT -->
-        <section id="layanan" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="bg-gradient-to-br from-white to-corporate-50 rounded-3xl border border-slate-200 p-8 lg:p-12 shadow-sm space-y-8">
-                <div class="text-center max-w-2xl mx-auto space-y-2">
-                    <span class="text-xs font-bold uppercase tracking-wider text-medical-600 bg-medical-50 px-3 py-1 rounded-full border border-medical-200">Layanan Korporat & Faskes</span>
-                    <h2 class="text-2xl sm:text-3xl font-extrabold text-corporate-900">Mengapa Rumah Sakit & Klinik Memilih Elvora Medika Solution?</h2>
-                    <p class="text-xs sm:text-sm text-slate-600">Kami berkomitmen menjadi mitra strategis pengadaan alat kesehatan habis pakai dengan standar mutu tertinggi.</p>
-                </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-3">
-                        <div class="w-12 h-12 rounded-xl bg-medical-50 text-medical-600 flex items-center justify-center font-bold text-lg">
-                            <i data-lucide="shield-check" class="w-6 h-6"></i>
-                        </div>
-                        <h3 class="font-bold text-corporate-900 text-base">Legalitas & Kemenkes Resmi</h3>
-                        <p class="text-xs text-slate-600 leading-relaxed">Seluruh produk BMHP kami telah memiliki izin edar resmi Kementerian Kesehatan RI, menjamin keamanan dan kepatuhan audit rumah sakit.</p>
+        <!-- Layanan B2B Section -->
+        <section id="layanan" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+            <div class="bg-corporate-900 rounded-3xl p-8 sm:p-12 text-white relative overflow-hidden">
+                <div class="absolute inset-0 opacity-5 bg-[radial-gradient(#10b981_1px,transparent_1px)] [background-size:20px_20px]"></div>
+                <div class="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                    <div class="space-y-4">
+                        <span class="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-medical-500/20 text-medical-400 text-xs font-bold border border-medical-500/30">
+                            <i data-lucide="building-2" class="w-3.5 h-3.5"></i> Layanan Pengadaan Khusus Faskes
+                        </span>
+                        <h2 class="text-2xl sm:text-3xl font-extrabold">Bekerjasama dengan Rumah Sakit, Klinik & Instansi Kesehatan</h2>
+                        <p class="text-slate-300 text-sm">
+                            Kami menyediakan sistem e-purchasing, e-katalog LKPP, pengadaan tender rutin, serta faktur pajak lengkap (PPN) resmi untuk seluruh kebutuhan fasilitas kesehatan Anda.
+                        </p>
                     </div>
-
-                    <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-3">
-                        <div class="w-12 h-12 rounded-xl bg-medical-50 text-medical-600 flex items-center justify-center font-bold text-lg">
-                            <i data-lucide="truck" class="w-6 h-6"></i>
-                        </div>
-                        <h3 class="font-bold text-corporate-900 text-base">Distribusi Cepat & Aman</h3>
-                        <p class="text-xs text-slate-600 leading-relaxed">Jaringan logistik handal memastikan ketersediaan stok rutin rumah sakit dan klinik Anda tidak pernah terlambat.</p>
-                    </div>
-
-                    <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-3">
-                        <div class="w-12 h-12 rounded-xl bg-medical-50 text-medical-600 flex items-center justify-center font-bold text-lg">
-                            <i data-lucide="handshake" class="w-6 h-6"></i>
-                        </div>
-                        <h3 class="font-bold text-corporate-900 text-base">Skema Pembayaran Fleksibel</h3>
-                        <p class="text-xs text-slate-600 leading-relaxed">Tersedia penawaran khusus, e-Katalog, sistem tender, serta term of payment (TOP) untuk mitra institusi terpercaya.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- TENTANG KAMI -->
-        <section id="tentang" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                <div class="space-y-4">
-                    <span class="text-xs font-bold uppercase tracking-wider text-medical-600 bg-medical-50 px-3 py-1 rounded-full border border-medical-200">Tentang Elvora Medika Solution</span>
-                    <h2 class="text-2xl sm:text-3xl font-extrabold text-corporate-900">Mitra Pengadaan Alat Kesehatan & BMHP Terdepan di Indonesia</h2>
-                    <p class="text-sm text-slate-600 leading-relaxed">
-                        <strong>Elvora Medika Solution</strong> hadir sebagai jawaban atas kebutuhan fasilitas kesehatan modern yang menuntut kecepatan, sterilitas tinggi, dan transparansi harga dalam pengadaan Bahan Medis Habis Pakai (BMHP).
-                    </p>
-                    <p class="text-sm text-slate-600 leading-relaxed">
-                        Kami melayani suplai rutin untuk ratusan rumah sakit swasta maupun pemerintah, klinik bersalin, laboratorium klinik, dan apotek di seluruh wilayah Indonesia dengan dukungan layanan pelanggan profesional via WhatsApp.
-                    </p>
-                    <div class="pt-2 flex gap-4">
-                        <a href="https://wa.me/6281280717166?text=Halo%20Elvora%20Medika%20Solution,%20saya%20ingin%20bekerjasama%20sebagai%20mitra%20faskes" target="_blank" class="px-5 py-3 rounded-xl bg-corporate-900 text-white font-bold text-xs hover:bg-corporate-800 transition shadow-md flex items-center gap-2">
-                            <i data-lucide="building-2" class="w-4 h-4 text-medical-400"></i> Kerjasama Institusi / Faskes
+                    <div class="flex flex-col sm:flex-row gap-3 justify-start lg:justify-end">
+                        <a href="https://wa.me/6281280717166?text=Halo%20Elvora%20Medika%20Solution,%20saya%20ingin%20bekerjasama%20pengadaan%20BMHP%20untuk%20Rumah%20Sakit/Klinik" target="_blank" class="px-6 py-3.5 rounded-xl bg-medical-500 hover:bg-medical-600 text-white font-bold text-xs transition flex items-center justify-center gap-2 shadow-lg shadow-medical-500/20">
+                            <i data-lucide="handshake" class="w-4 h-4"></i> Ajukan Kerjasama B2B
                         </a>
                     </div>
                 </div>
+            </div>
+        </section>
 
-                <div class="bg-gradient-to-tr from-medical-600 to-emerald-500 p-8 rounded-3xl text-white shadow-xl space-y-6">
-                    <div class="flex items-center gap-3">
-                        <div class="w-12 h-12 rounded-2xl bg-white/20 backdrop-blur-md flex items-center justify-center">
-                            <i data-lucide="award" class="w-7 h-7 text-white"></i>
-                        </div>
-                        <div>
-                            <h3 class="font-extrabold text-lg">Komitmen Mutu & Sterilitas</h3>
-                            <p class="text-xs text-medical-100">Standar Internasional ISO & Kemenkes RI</p>
-                        </div>
-                    </div>
-                    <p class="text-xs leading-relaxed text-slate-100">
-                        Setiap produk BMHP yang didistribusikan melalui Elvora Medika Solution melewati quality control yang ketat untuk menjamin keamanan pasien dan tenaga medis di garis depan pelayanan kesehatan.
+        <!-- Tentang Kami Section -->
+        <section id="tentang" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="space-y-4">
+                    <span class="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-medical-100 text-medical-700 text-xs font-bold">
+                        <i data-lucide="info" class="w-3.5 h-3.5"></i> Tentang Elvora Medika Solution
+                    </span>
+                    <h2 class="text-2xl sm:text-3xl font-extrabold text-corporate-900">Komitmen Mutu & Keamanan Alat Kesehatan Indonesia</h2>
+                    <p class="text-sm text-slate-600 leading-relaxed">
+                        Elvora Medika Solution hadir sebagai distributor resmi yang fokus menyuplai Bahan Medis Habis Pakai (BMHP) dengan standar kualitas tertinggi. Seluruh produk kami telah memiliki izin edar resmi dari Kementerian Kesehatan RI dan melalui quality control sterilisasi yang ketat.
                     </p>
-                    <div class="p-4 bg-white/10 rounded-2xl border border-white/20 backdrop-blur-md flex items-center justify-between text-xs">
-                        <span>Butuh Proposal & Daftar Harga Lengkap?</span>
-                        <a href="https://wa.me/6281280717166?text=Halo%20Elvora%20Medika,%20mohon%20kirimkan%20Proposal%20dan%20Price%20List%20BMHP%20terbaru" target="_blank" class="px-3 py-1.5 rounded-lg bg-white text-medical-800 font-bold hover:bg-medical-50 transition">Minta Price List</a>
+                    <div class="grid grid-cols-2 gap-4 pt-2">
+                        <div class="p-4 bg-white rounded-2xl border border-slate-200 shadow-sm space-y-1">
+                            <i data-lucide="award" class="w-6 h-6 text-medical-600"></i>
+                            <h4 class="font-bold text-sm text-slate-900">Berizin Resmi Kemenkes</h4>
+                            <p class="text-xs text-slate-500">Legalitas lengkap & dijamin aman.</p>
+                        </div>
+                        <div class="p-4 bg-white rounded-2xl border border-slate-200 shadow-sm space-y-1">
+                            <i data-lucide="truck" class="w-6 h-6 text-medical-600"></i>
+                            <h4 class="font-bold text-sm text-slate-900">Pengiriman Cepat</h4>
+                            <p class="text-xs text-slate-500">Distribusi aman ke seluruh pelosok.</p>
+                        </div>
                     </div>
+                </div>
+                <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm space-y-6">
+                    <h3 class="font-extrabold text-lg text-corporate-900">Jam Operasional & Layanan</h3>
+                    <div class="space-y-3 text-xs text-slate-600">
+                        <div class="flex justify-between py-2 border-b border-slate-100">
+                            <span class="font-medium text-slate-700">Senin — Jumat</span>
+                            <span>08.00 - 17.00 WIB</span>
+                        </div>
+                        <div class="flex justify-between py-2 border-b border-slate-100">
+                            <span class="font-medium text-slate-700">Sabtu</span>
+                            <span>08.00 - 14.00 WIB</span>
+                        </div>
+                        <div class="flex justify-between py-2">
+                            <span class="font-medium text-slate-700">Minggu / Hari Besar</span>
+                            <span class="text-medical-600 font-bold">Tutup (Chat WhatsApp Aktif)</span>
+                        </div>
+                    </div>
+                    <a href="https://wa.me/6281280717166" target="_blank" class="w-full py-3 rounded-xl bg-corporate-900 hover:bg-corporate-800 text-white font-bold text-xs transition flex items-center justify-center gap-2">
+                        <i data-lucide="phone" class="w-4 h-4 text-medical-400"></i> Hubungi Customer Service
+                    </a>
                 </div>
             </div>
         </section>
 
-        <!-- KONTAK & CALL TO ACTION -->
+        <!-- Kontak Section -->
         <section id="kontak" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="bg-gradient-to-r from-medical-900 via-medical-700 to-corporate-900 rounded-3xl p-8 sm:p-12 text-white shadow-2xl flex flex-col md:flex-row items-center justify-between gap-8">
-                <div class="space-y-3 text-center md:text-left">
-                    <span class="px-3 py-1 rounded-full bg-white/10 text-medical-300 text-xs font-semibold border border-white/20">Hubungi Tim Marketing Kami</span>
-                    <h2 class="text-2xl sm:text-3xl font-extrabold">Siap Melengkapi Kebutuhan BMHP Faskes Anda?</h2>
-                    <p class="text-slate-300 text-xs sm:text-sm max-w-xl">Konsultasikan kebutuhan rumah sakit atau klinik Anda sekarang juga. Tim sales kami siap merespon cepat via WhatsApp.</p>
+            <div class="bg-white rounded-3xl border border-slate-200 p-8 sm:p-12 shadow-sm grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div class="space-y-4">
+                    <span class="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-medical-100 text-medical-700 text-xs font-bold">
+                        <i data-lucide="map-pin" class="w-3.5 h-3.5"></i> Kantor & Gudang Distribusi
+                    </span>
+                    <h2 class="text-2xl font-extrabold text-corporate-900">Hubungi atau Kunjungi Kami</h2>
+                    <p class="text-xs text-slate-600 leading-relaxed">
+                        Silakan hubungi tim marketing kami untuk pemesanan grosir, konsultasi pengadaan faskes, maupun penawaran harga khusus.
+                    </p>
+                    <div class="space-y-3 pt-2 text-xs text-slate-700">
+                        <div class="flex items-start gap-3">
+                            <i data-lucide="map-pin" class="w-4 h-4 text-medical-600 mt-0.5"></i>
+                            <span>Jl. Raya Medika No. 88, Cikarang, Kabupaten Bekasi, Jawa Barat</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i data-lucide="phone" class="w-4 h-4 text-medical-600"></i>
+                            <span>Hotline: 0812-8071-7166</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i data-lucide="mail" class="w-4 h-4 text-medical-600"></i>
+                            <span>Email: support@elvoramedika.com</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="flex flex-col sm:flex-row gap-3">
-                    <a href="https://wa.me/6281280717166?text=Halo%20Elvora%20Medika%20Solution,%20saya%20ingin%20konsultasi%20pengadaan%20BMHP" target="_blank" class="px-6 py-3.5 rounded-xl bg-white text-medical-900 font-bold text-xs hover:bg-slate-100 transition shadow-lg flex items-center justify-center gap-2">
-                        <i data-lucide="message-circle" class="w-4 h-4 text-emerald-600"></i> WhatsApp: 0812-8071-7166
+                <div class="bg-corporate-50 p-6 rounded-2xl border border-slate-200 flex flex-col justify-center space-y-4 text-center">
+                    <div class="w-12 h-12 rounded-2xl bg-medical-500 text-white flex items-center justify-center mx-auto shadow-md">
+                        <i data-lucide="message-circle" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-900 text-base">Konsultasi Cepat via WhatsApp</h3>
+                    <p class="text-xs text-slate-500 max-w-sm mx-auto">Respon cepat dalam hitungan menit untuk setiap kebutuhan pengadaan BMHP Anda.</p>
+                    <a href="https://wa.me/6281280717166?text=Halo%20Elvora%20Medika%20Solution,%20saya%20ingin%20bertanya%20mengenai%20produk%20dan%20pemesanan%20BMHP" target="_blank" class="px-6 py-3 rounded-xl bg-medical-600 hover:bg-medical-700 text-white font-bold text-xs transition inline-flex items-center justify-center gap-2 shadow-md shadow-medical-500/20 w-max mx-auto">
+                        <i data-lucide="message-circle" class="w-4 h-4"></i> Chat WhatsApp Sekarang
                     </a>
                 </div>
             </div>
@@ -572,73 +560,62 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-corporate-900 text-slate-400 border-t border-slate-800 py-12">
+    <footer class="bg-corporate-900 text-slate-400 py-12 border-t border-slate-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                <div class="space-y-3 md:col-span-2">
-                    <div class="flex items-center space-x-3">
-                        <div class="w-10 h-10 rounded-xl bg-medical-600 flex items-center justify-center text-white">
-                            <i data-lucide="activity" class="w-5 h-5"></i>
-                        </div>
-                        <span class="text-lg font-bold text-white">ELVORA MEDIKA SOLUTION</span>
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-medical-700 to-emerald-400 flex items-center justify-center text-white shadow-lg shadow-medical-500/20">
+                        <i data-lucide="activity" class="w-6 h-6"></i>
                     </div>
-                    <p class="text-xs text-slate-400 max-w-sm leading-relaxed">
-                        Distributor resmi Bahan Medis Habis Pakai (BMHP) terpercaya untuk rumah sakit, klinik, dan laboratorium di seluruh Indonesia. Bergaransi steril, legalitas lengkap, dan harga kompetitif.
-                    </p>
+                    <div>
+                        <span class="text-lg font-extrabold tracking-tight text-white">ELVORA MEDIKA</span>
+                        <span class="block text-[10px] font-bold uppercase tracking-widest text-medical-400">Solution</span>
+                    </div>
                 </div>
-
-                <div class="space-y-3 text-xs">
-                    <h4 class="font-bold text-white text-sm uppercase tracking-wider">Kategori BMHP</h4>
-                    <ul class="space-y-2">
-                        <li><a href="#katalog" class="hover:text-white transition">Infus & Transfusi Set</a></li>
-                        <li><a href="#katalog" class="hover:text-white transition">Alat Suntik & Jarum</a></li>
-                        <li><a href="#katalog" class="hover:text-white transition">Sarung Tangan Medis</a></li>
-                        <li><a href="#katalog" class="hover:text-white transition">Kasa & Perban Steril</a></li>
-                        <li><a href="#katalog" class="hover:text-white transition">Diagnostik & Lab</a></li>
-                    </ul>
-                </div>
-
-                <div class="space-y-3 text-xs">
-                    <h4 class="font-bold text-white text-sm uppercase tracking-wider">Kontak & Layanan</h4>
-                    <p>Hotline WA: <strong class="text-white">0812-8071-7166</strong></p>
-                    <p>Email: <strong class="text-white">info@elvoramedika.co.id</strong></p>
-                    <p>Jam Kerja: Senin - Sabtu (08.00 - 17.00 WIB)</p>
+                <div class="flex flex-wrap gap-6 text-xs font-medium">
+                    <a href="#beranda" class="hover:text-white transition">Beranda</a>
+                    <a href="#katalog" class="hover:text-white transition">Katalog BMHP</a>
+                    <a href="#layanan" class="hover:text-white transition">Layanan B2B</a>
+                    <a href="#tentang" class="hover:text-white transition">Tentang Kami</a>
+                    <a href="#kontak" class="hover:text-white transition">Kontak</a>
                 </div>
             </div>
-
-            <div class="pt-8 border-t border-slate-800 flex flex-col sm:flex-row justify-between items-center text-xs text-slate-500 gap-4">
+            <div class="border-t border-slate-800 pt-6 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs">
                 <p>&copy; 2026 Elvora Medika Solution. Hak Cipta Dilindungi Undang-Undang.</p>
-                <div class="flex space-x-4">
-                    <span class="hover:text-slate-400">Legalitas Kemenkes RI</span>
-                    <span>•</span>
-                    <span class="hover:text-slate-400">ISO Standard</span>
-                    <span>•</span>
-                    <span class="hover:text-slate-400">B2B Verified</span>
-                </div>
+                <p>Distributor Resmi Bahan Medis Habis Pakai (BMHP) Indonesia</p>
             </div>
         </div>
     </footer>
 
-    <!-- SCRIPT INTERACTIVE & WHATSAPP REDIRECTION -->
+    <!-- JavaScript Scripts -->
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            lucide.createIcons();
-        });
+        // Inisialisasi Lucide Icons
+        lucide.createIcons();
 
+        // Mobile Menu Toggle
         function toggleMobileMenu() {
             const menu = document.getElementById('mobile-menu');
             menu.classList.toggle('hidden');
         }
 
+        // WhatsApp Order Function
+        function orderViaWhatsApp(productName, minOrder) {
+            const phoneNumber = "6281280717166";
+            const message = `Halo Elvora Medika Solution, saya ingin memesan produk berikut:\n\n*Produk:* ${productName}\n*Jumlah/Kemasan:* ${minOrder}\n\nMohon informasi ketersediaan stock dan total pembayarannya. Terima kasih.`;
+            const encodedMessage = encodeURIComponent(message);
+            window.open(`https://wa.me/${phoneNumber}?text=${encodedMessage}`, '_blank');
+        }
+
+        // Katalog Filter Function
         function filterCatalog(category) {
-            // Update active button styling
             const buttons = document.querySelectorAll('.cat-btn');
             buttons.forEach(btn => {
-                btn.className = "cat-btn px-4 py-2 rounded-xl text-xs font-semibold bg-white text-slate-600 border border-slate-200 hover:bg-slate-50 transition";
+                btn.classList.remove('bg-medical-600', 'text-white', 'font-bold', 'shadow-sm');
+                btn.classList.add('bg-white', 'text-slate-600', 'font-semibold', 'border', 'border-slate-200');
             });
-            event.target.className = "cat-btn px-4 py-2 rounded-xl text-xs font-bold bg-medical-600 text-white shadow-sm transition";
+            event.target.classList.remove('bg-white', 'text-slate-600', 'font-semibold', 'border', 'border-slate-200');
+            event.target.classList.add('bg-medical-600', 'text-white', 'font-bold', 'shadow-sm');
 
-            // Filter cards
             const cards = document.querySelectorAll('.product-card');
             cards.forEach(card => {
                 if (category === 'all' || card.getAttribute('data-category') === category) {
@@ -649,25 +626,20 @@
             });
         }
 
+        // Search Product Function
         function searchCatalogItems() {
-            const query = document.getElementById('search-product').value.toLowerCase();
+            const input = document.getElementById('search-product').value.toLowerCase();
             const cards = document.querySelectorAll('.product-card');
+
             cards.forEach(card => {
                 const title = card.querySelector('h3').innerText.toLowerCase();
                 const desc = card.querySelector('p').innerText.toLowerCase();
-                if (title.includes(query) || desc.includes(query)) {
+                if (title.includes(input) || desc.includes(input)) {
                     card.style.display = 'flex';
                 } else {
                     card.style.display = 'none';
                 }
             });
-        }
-
-        function orderViaWhatsApp(productName, minOrder) {
-            const phoneNumber = "6281280717166";
-            const message = `Halo Elvora Medika Solution,\n\nSaya ingin memesan / meminta penawaran harga untuk produk BMHP berikut:\n\n*Nama Produk:* ${productName}\n*Kemasan / Min. Order:* ${minOrder}\n\nMohon konfirmasi ketersediaan stok dan rincian pengirimannya. Terima kasih.`;
-            const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
-            window.open(url, '_blank');
         }
     </script>
 </body>
